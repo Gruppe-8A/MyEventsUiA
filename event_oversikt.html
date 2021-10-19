@@ -3,22 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>Event oversikt</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/src/styles.css">
+<style>
+    body {
+        text-align: center;
+        background-color: #c60c30;
+    }
+    .headerEventOversikt {
+        color: white;
+        padding-bottom: 20px;
+    }
+
+    .event-oversikt{
+        border: 1px solid white;
+        color: white;
+        margin-right: auto;
+        margin-left: auto;
+    }
+</style>
 </head>
 <body>
 
-<header>Event-oversikt</header>
+<header class="headerEventOversikt">Event-oversikt</header>
 <div>
 </div>
 
 <Table class="event-oversikt">
-    <tr>
-        <th>Dato</th>
-        <th>Event</th>
+    <tr class="event-oversikt">
+        <th class="event-oversikt">Dato</th>
+        <th class="event-oversikt">Event</th>
     </tr>
     <tr>
-        <td>21.09.21</td>
-        <td>Bursdagsfest</td>
+        <td class="event-oversikt">21.09.21</td>
+        <td class="event-oversikt">Bursdagsfest</td>
+    </tr>
+    <tr>
+        <td class="event-oversikt">30.10.21</td>
+        <td class="event-oversikt">Halloween party</td>
+    </tr>
+    <tr>
+        <td class="event-oversikt">25.11.21</td>
+        <td class="event-oversikt">Høsttakkefest</td>
+    </tr>
+    <tr>
+        <td class="event-oversikt">18.12.21</td>
+        <td class="event-oversikt">Julekro</td>
+    </tr>
+    <tr>
+        <td colspan="2"><button>Se fler events</button></td>
     </tr>
 
 </Table>
