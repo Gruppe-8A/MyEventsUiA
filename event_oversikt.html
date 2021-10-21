@@ -5,7 +5,7 @@
     <title>Event oversikt</title>
     <link rel="stylesheet" href="/src/styles.css">
 <style>
-    body {
+    .body_event_oversikt {
         text-align: center;
         background-color: #c60c30;
     }
@@ -14,28 +14,44 @@
         padding-bottom: 20px;
     }
 
-    .event-oversikt{
-        border: 1px solid white;
+    .event-oversikt {
+        border: 2.5px solid white;
         color: white;
         margin-right: auto;
         margin-left: auto;
+        border-radius: 5px;
+    }
+    .datoEvent {
+        border: 2.5px solid white;
+        color: white;
+        margin-right: auto;
+        margin-left: auto;
+        border-radius: 5px;
+        padding-right: 20px;
+        padding-left: 20px;
     }
 </style>
 </head>
-<body>
+<body class="body_event_oversikt">
 
 <header class="headerEventOversikt">Event-oversikt</header>
 <div>
 </div>
-
-<Table class="event-oversikt">
-    <tr class="event-oversikt">
-        <th class="event-oversikt">Dato</th>
-        <th class="event-oversikt">Event</th>
+<table class="datoEvent">
+    <tr>
+        <th class="datoEvent">Dato</th>
+        <th class="datoEvent">Event</th>
     </tr>
+</table>
+
+<Table class="event-oversikt" id="eventOversikt">
     <tr>
         <td class="event-oversikt">21.09.21</td>
         <td class="event-oversikt">Bursdagsfest</td>
+    </tr>
+    <tr>
+        <td class="event-oversikt">12.11.21</td>
+        <td class="event-oversikt"><a href="show_event.html">Kino: No time to die</a></td>
     </tr>
     <tr>
         <td class="event-oversikt">30.10.21</td>
@@ -50,10 +66,26 @@
         <td class="event-oversikt">Julekro</td>
     </tr>
     <tr>
-        <td colspan="2"><button>Se fler events</button></td>
+        <td colspan="2"><button onclick="tableRow()">Se flere events</button></td>
     </tr>
 
 </Table>
+<script>
 
+    function tableRow() {
+        var table = document.getElementById('eventOversikt')
+        var row = table.insertRow(5);
+        var cell1 = row.insertCell(-1);
+        var cell2 = row.insertCell(-1);
+        cell1.innerHTML = '01.04.2021';
+        cell2.innerHTML = 'Aprilsnarr!';
+        cell1.style.border = '2.5px solid white';
+        cell2.style.border = '2.5px solid white';
+        cell1.style.borderRadius = '5px';
+        cell2.style.borderRadius = '5px';
+    }
+
+
+</script>
 </body>
 </html>
