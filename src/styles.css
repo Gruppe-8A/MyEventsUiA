@@ -139,6 +139,9 @@ textarea {
  
 }
 
+body {
+    margin: 0px;
+}
 .opprett-knapp {
     background-color: #d1002c;
     color: #FFFFFF;
@@ -228,3 +231,10 @@ lastoppbilde {
     font-size: 25px;
 }
 
+.meny {
+    position: fixed;
+    bottom: 0px;
+    height: 60px;
+    width: 100%;
+    background-color: #D1002C;
+}
