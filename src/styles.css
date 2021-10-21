@@ -222,13 +222,9 @@ lastoppbilde {
     margin-left: auto;
     border-radius: 5px;
 }
-.datoEvent {
-    border: 2.5px solid white;
-    color: white;
-    margin-right: auto;
-    margin-left: auto;
-    border-radius: 5px;
-    padding-right: 20px;
-    padding-left: 20px;
+.knappOversikt {
+    width: 200px;
+    height: 60px;
+    font-size: 25px;
 }
 

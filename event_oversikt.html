@@ -4,47 +4,16 @@
     <meta charset="UTF-8">
     <title>Event oversikt</title>
     <link rel="stylesheet" href="/src/styles.css">
-<style>
-    .body_event_oversikt {
-        text-align: center;
-        background-color: #c60c30;
-    }
-    .headerEventOversikt {
-        color: white;
-        padding-bottom: 20px;
-    }
-
-    .event-oversikt {
-        border: 2.5px solid white;
-        color: white;
-        margin-right: auto;
-        margin-left: auto;
-        border-radius: 5px;
-    }
-    .datoEvent {
-        border: 2.5px solid white;
-        color: white;
-        margin-right: auto;
-        margin-left: auto;
-        border-radius: 5px;
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-</style>
 </head>
 <body class="body_event_oversikt">
 
 <header class="headerEventOversikt">Event-oversikt</header>
-<div>
-</div>
-<table class="datoEvent">
-    <tr>
-        <th class="datoEvent">Dato</th>
-        <th class="datoEvent">Event</th>
-    </tr>
-</table>
 
 <Table class="event-oversikt" id="eventOversikt">
+    <tr>
+        <th class="event-oversikt">Dato</th>
+        <th class="event-oversikt">Event</th>
+    </tr>
     <tr>
         <td class="event-oversikt">21.09.21</td>
         <td class="event-oversikt">Bursdagsfest</td>
@@ -67,19 +36,21 @@
         <td class="event-oversikt">Julekro</td>
     </tr>
     <tr>
-        <td colspan="2"><button onclick="tableRow()">Se flere events</button></td>
+        <td colspan="2"><button class="knappOversikt" onclick="tableRow()">Se flere events</button></td>
     </tr>
+
+
 
 </Table>
 <script>
 
     function tableRow() {
         var table = document.getElementById('eventOversikt')
-        var row = table.insertRow(5);
+        var row = table.insertRow(6);
         var cell1 = row.insertCell(-1);
         var cell2 = row.insertCell(-1);
-        cell1.innerHTML = '01.04.2021';
-        cell2.innerHTML = 'Aprilsnarr!';
+        cell1.innerHTML = '01.04.21';
+        cell2.innerHTML = 'Rumpeldunk';
         cell1.style.border = '2.5px solid white';
         cell2.style.border = '2.5px solid white';
         cell1.style.borderRadius = '5px';
