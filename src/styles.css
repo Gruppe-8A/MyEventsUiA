@@ -237,4 +237,9 @@ lastoppbilde {
     height: 60px;
     width: 100%;
     background-color: #D1002C;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.menu-btn {
+    text-align: center;
 }
