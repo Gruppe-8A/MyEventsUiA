@@ -216,6 +216,7 @@ lastoppbilde {
 .headerEventOversikt {
     color: white;
     padding-bottom: 20px;
+    font-size: 35px;
 }
 
 .event-oversikt {
@@ -224,6 +225,7 @@ lastoppbilde {
     margin-right: auto;
     margin-left: auto;
     border-radius: 5px;
+    font-size: 35px;
 }
 .knappOversikt {
     width: 200px;
