@@ -1,4 +1,5 @@
 
+
 .event-oversikt{
     border-color: solid black;
     border: 1 px;
@@ -207,11 +208,10 @@ lastoppbilde {
     font-size: 15px;
 }
 
-
-
 .divBodyOversikt {
     text-align: center;
     background-color: #c60c30;
+    font-family: Calibri;
 }
 .headerEventOversikt {
     color: white;
@@ -226,11 +226,36 @@ lastoppbilde {
     margin-left: auto;
     border-radius: 5px;
     font-size: 35px;
+    white-space: pre;
 }
+#headerOversikt {
+    color: white;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 35px;
+}
+
 .knappOversikt {
     width: 200px;
     height: 60px;
     font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#søkefeltoversikt {
+    width: 600px;
+    height: 30px;
+    font-family: Calibri;
+    font-size: 25px;
+    margin-bottom: 15px;
+    margin-right: 25px;
+    border-radius: 5px;
+
+}
+#eventOversikt {
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .meny {
