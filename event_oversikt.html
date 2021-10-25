@@ -5,6 +5,77 @@
     <title>Event oversikt</title>
 </head>
 <body>
+<div class="divBodyOversikt">
 
+<table class="event-oversikt" id="eventOversikt">
+    <tr>
+        <th class="event-oversikt">Dato</th>
+        <th class="event-oversikt">Event</th>
+    </tr>
+    <tr>
+        <td class="event-oversikt">21.09.21</td>
+        <td class="event-oversikt">Bursdagsfest</td>
+    </tr>
+    <tr>
+        <td class="event-oversikt">12.11.21</td>
+        <td class="event-oversikt"><a href="show_event.html">Kino: No time to die</a></td>
+        <!-- La til link til show event siden, legge dette til på alle event tekstene? -->
+    </tr>
+    <tr>
+        <td class="event-oversikt">30.10.21</td>
+        <td class="event-oversikt">Halloween party</td>
+    </tr>
+    <tr>
+        <td class="event-oversikt">25.11.21</td>
+        <td class="event-oversikt">Høsttakkefest</td>
+    </tr>
+    <tr>
+        <td class="event-oversikt">18.12.21</td>
+        <td class="event-oversikt">Julekro</td>
+    </tr>
+    <tr>
+        <td colspan="2"><button class="knappOversikt" onclick="tableRow()">Se flere events</button></td>
+    </tr>
+
+
+
+</table>
+<div class='meny'>
+        <div class='menu-btn'>
+            <a href="event_oversikt.html">
+                <img src="img/menu.png" style="height: 50px; margin-top: 5px;"/>
+            </a>
+        </div>
+        <div class="menu-btn">
+            <a href="opprett_event.html" class="menu-btn">
+                <img src="img/pluss.png" style="height: 50px; margin-top: 5px;"/>
+            </a>
+        </div>
+        <div class="menu-btn">
+            <a href="venner.html" class="menu-btn">
+                <img src="img/friends2.png" style="height: 50px; margin-top: 5px;"/>
+            </a>
+        </div>
+    </div>
+</div>
+<script>
+  //Funksjon for visning av flere events. Metode hentet fra: https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/insertRow sett 21.10.21
+
+    function tableRow() {
+        var table = document.getElementById('eventOversikt')
+        var row = table.insertRow(6);
+        var cell1 = row.insertCell(-1);
+        var cell2 = row.insertCell(-1);
+        cell1.innerHTML = '01.04.21';
+        cell2.innerHTML = 'Rumpeldunk';
+        cell1.style.border = '2.5px solid white';
+        cell2.style.border = '2.5px solid white';
+        cell1.style.borderRadius = '5px';
+        cell2.style.borderRadius = '5px';
+    }
+
+
+</script>
+>>>>>>> Stashed changes
 </body>
 </html>
