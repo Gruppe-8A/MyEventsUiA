@@ -55,7 +55,7 @@
 }
 
 .switch-input:checked + .switch-label::before {
-    background-color: #89c12d;
+    background-color: #d1002c;
 }
 
 .switch-input:checked + .switch-label::after {
@@ -118,7 +118,7 @@
 }
 
 .switch-input-2:checked + .switch-label-2::before {
-    background-color: #89c12d;
+    background-color: #d1002c;
 }
 
 .switch-input-2:checked + .switch-label-2::after {
