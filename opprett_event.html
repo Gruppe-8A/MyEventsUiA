@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Opprett Event</title>
     <link rel="stylesheet" href="src/styles.css">
 </head>
@@ -15,11 +15,49 @@
         </div>
         <div class='content'>
             <form>
-                <label for="event_title">Event tittel</label><br>
-                <input type="text" id="event_title" name="event_title" class="event-tittel">
+                <label for="event_title" class="form-header-text">Event tittel</label><br>
+                <input type="text" id="event_title" name="event_title" class="input-event-tittel">
                 <br>
-                <br><label for="event_description">Event beskrivelse</label><br>
-                <textarea id="event_description" name="event_description"></textarea>
+
+                <label for="event_description" class="form-header-text">Event beskrivelse</label>
+                <table class="tbl">
+                    <tr>
+                        <td><textarea id="event_description" name="event_description" class="input-event-textarea"></textarea>
+                        </td>
+                        <td>
+                            Last opp bilde
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <table class="tbl-bottom-frm form-text-small">
+                    <tr>
+                        <td colspan="2" style="text-align: center;">
+                            Ytterligere informasjon (frivillig)</td>
+                    </tr>
+                    <tr>
+                        <td>Tillat med alkohol?</td>
+                        <td style="text-align: center;">Nei <div class="switch">
+                        <input id="switch-1" type="checkbox" class="switch-input"/>
+                        <label for="switch-1" class="switch-label">Switch</label>
+                    </div> Ja</td>
+                    </tr>
+                    <tr>
+                        <td>Er arrangementet utendørs?</td>
+                        <td style="text-align: center;">Nei <div class="switch">
+                        <input id="switch-2" type="checkbox" class="switch-input"/>
+                        <label for="switch-2" class="switch-label">Switch</label>
+                    </div> Ja</td>
+                    </tr>
+                    <tr>    
+                        <td>Maks antall gjester:</td>
+                        <td><input type="number" id="antall-gjester" name="antall-gjester" class="input-event-antall" placeholder="0"></td>
+                    </tr>
+                </table>
+                <br>
+                <div align="center">
+                    <button id="opprett-event" type="submit" name="opprett-event" class="submit-btn">OPPRETT</button>
+            </div>
             </form>
         </div>
         
@@ -28,17 +66,17 @@
 <div class='meny'>
         <div class='menu-btn'>
             <a href="event_oversikt.html">
-                <img src="img/menu.png" alt="meny" style="height: 50px; margin-top: 5px;"/>
+                <img src="img/menu.png" alt="meny" style="height: 40px; margin-top: 5px;"/>
             </a>
         </div>
         <div class="menu-btn">
             <a href="opprett_event.html" class="menu-btn">
-                <img src="img/pluss.png" alt="opprett event" style="height: 50px; margin-top: 5px;"/>
+                <img src="img/pluss.png" alt="opprett event" style="height: 40px; margin-top: 5px;"/>
             </a>
         </div>
         <div class="menu-btn">
             <a href="venner.html" class="menu-btn">
-                <img src="img/friends2.png" alt="venner" style="height: 50px; margin-top: 5px;"/>
+                <img src="img/friends2.png" alt="venner" style="height: 40px; margin-top: 5px;"/>
             </a>
         </div>
     </div>

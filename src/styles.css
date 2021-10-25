@@ -72,81 +72,14 @@ tilleggsinformasjon {
     padding: 2rem;
 }
 
-/* Funksjonell av-og-på-knapp for å merke om arrangementent foregår utendørs */
-
-.switch-2 {
-    position: relative;
-    display: inline-block;
-}
-
-.switch-input-2 {
-    display: none;
-}
-
-.switch-label-2 {
-    display: block;
-    width: 48px;
-    height: 24px;
-    text-indent: -150%;
-    clip: rect(0 0 0 0);
-    color: transparent;
-    user-select: none;
-}
-
-.switch-label-2::before,
-.switch-label-2::after {
-    content: "";
-    display: block;
-    position: absolute;
-    cursor: pointer;
-}
-
-.switch-label-2::before {
-    width: 100%;
-    height: 100%;
-    background-color: #dedede;
-    border-radius: 9999em;
-    -webkit-transition: background-color 0.25s ease;
-    transition: background-color 0.25s ease;
-}
-
-.switch-label-2::after {
-    top: 0;
-    left: 0;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background-color: #fff;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.45);
-    -webkit-transition: left 0.25s ease;
-    transition: left 0.25s ease;
-}
-
-.switch-input-2:checked + .switch-label-2::before {
-    background-color: #89c12d;
-}
-
-.switch-input-2:checked + .switch-label-2::after {
-    left: 24px;
-}
-
-.event-tittel {
-    height: 45px;
-    width: 100%;
-    font-size: 25px;
-    color: #D1002C;
-    border: 0px;
-    border-bottom: 1px solid #D1002C;
-}
-
-.opprett-knapp {
+.submit-btn {
     background-color: #d1002c;
     color: #FFFFFF;
     text-align: center;
     padding: 16px 64px;
     border: 1px #d1002c;
     cursor: pointer;
-    transform: translate(100%, 100%);
+
 }
 
 .profilbilde {
@@ -159,7 +92,6 @@ tilleggsinformasjon {
     overflow: hidden;
     border: 1px solid gray;
     cursor: pointer;
-
 }
 
 #bilde {
@@ -185,8 +117,6 @@ tilleggsinformasjon {
     font-family: sans-serif;
     font-size: 15px;
 }
-
-
 
 .divBodyOversikt {
     text-align: center;
@@ -216,15 +146,17 @@ tilleggsinformasjon {
     position: fixed;
     bottom: 0px;
     left: 0px;
-    height: 60px;
+    height: 50px;
     width: 100%;
     background-color: #D1002C;
     display: grid;
+    overflow: hidden;
     grid-template-columns: auto auto auto;
 }
 .menu-btn {
     text-align: center;
 }
+
 
 html { 
   background: url(../img/map-bg.png) no-repeat center center fixed; 
@@ -237,8 +169,10 @@ body {
     margin:  0px;
 }
 
+/*CSS-klasse for styling av laget som ligger over kartet */
 .main-content {
     width: 100%;
+    max-width: 600px;
     background-color: white;
     height: 95%;
     bottom:  0px;
@@ -247,9 +181,30 @@ body {
     border-radius: 50px;
     opacity: 90%;
 }
+
+@media screen and (min-width: 600px) {
+    .main-content {
+        width: 100%;
+        max-width: 600px;
+        background-color: white;
+        height: 100%;
+        bottom:  0px;
+        position: fixed;
+        font-size: 1em;
+        border-radius: 0px;
+        opacity: 90%;
+    }
+}
+
+
+
+/*CSS-klasse for styling av lukk/sveip-knappen øverst på laget over kartet */
 .content-close {
     width: 100%;
 }
+
+
+/*CSS-klasse for styling av linjen for lukking */
 .close-line {
     margin-top: 0px;
     height: 5px;
@@ -257,15 +212,70 @@ body {
     background-color: #737373;
     border-radius: 5px;
 }
+
+/*CSS-klasse for styling av tittelen over lukke-linjen i laget over kartet */
 .content-title {
     margin-top: 5px;
     font-size: 12px;
     color: #D1002C;
     font-family: Muli;
 }
+
+/*Styling for div i laget som ligger over kartet */
 .content {
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 10px;
     font-family: Muli;
 }
+
+.input-event-tittel {
+    height: 45px;
+    width: 100%;
+    font-size: 25px;
+    color: #D1002C;
+    border: 0px;
+    border-bottom: 1px solid #D1002C;
+    box-shadow: inset 0 0 3px #bfbfbf;
+}
+
+.input-event-textarea {
+    width: 100%;
+    height: 160px;
+    font-size: 15px;
+    color: #D1002C;
+    border: 0px;
+    border-bottom: 1px solid #D1002C;
+    box-shadow: inset 0 0 3px #bfbfbf;
+    resize: none;
+}
+.form-header-text {
+    color: #175676;
+}
+
+.tbl {
+    width: 100%;
+}
+.tbl td {
+    width:  50%;
+    text-align: center;
+}
+
+.input-event-antall {
+    height: 25px;
+    width: 100%;
+    font-size: 15px;
+    color: #D1002C;
+    border: 0px;
+    border-bottom: 1px solid #D1002C;
+    box-shadow: inset 0 0 3px #bfbfbf;
+    text-align: center;
+}
+.form-text-small {
+    color: #175676;
+    font-size: 14px;
+}
+.tbl-bottom-frm td {
+    padding-top: 5px;
+}
+
