@@ -62,7 +62,7 @@
     left: 24px;
 }
 
-tilleggsinformasjon {
+.tilleggsinformasjon {
     text-align: center;
     padding: 2rem;
 }
@@ -130,7 +130,7 @@ tilleggsinformasjon {
 
 }
 
-textarea {
+.event-beskrivelse {
     width: 30%;
     height: 120px;
     padding: 20px 10px;
@@ -151,20 +151,8 @@ textarea {
 
 /* Last opp bilde */
 
-img {
+.lastoppbilde {
     height: 150px;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-lastoppbilde {
-    height: 100vh;
-    width: 100%;
-
 }
 
 .profilbilde {
@@ -177,7 +165,9 @@ lastoppbilde {
     overflow: hidden;
     border: 1px solid gray;
     cursor: pointer;
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 #bilde {
