@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <title>MyEventsUia</title>
+</head>
+<style>
+
+@font-face {
+        font-family: Muli;
+        src: url(src/fonts/muli/Muli.ttf);
+           }
+
+
+.FeideLoginBTN{
+ background-color: #c60c30;
+ border: 0;
+ color: white;
+ cursor: pointer;
+ display: block;
+ font: 400 1rem/1.25rem 'Muli';
+ margin-bottom: 1rem;
+ padding: 0 1rem;
+ text-align: center;
+ transition: background-color 0.5s ease;
+ width: 100%;
+ height: 5em;
+ 
+ }
+ .FeideLoginBTN:hover{
+     color: white;
+    background-color: #283678;
+ }
+
+</style>
+
+
+<body>
+<div>
+   <div>
+         <nav style="background-color: #c60c30;width: 100%;height:4em;">test</nav>
+   </div>
+
+
+
+
+
+   <div>
+       <img src="">
+   </div>
+
+
+
+   <div style="position: absolute; bottom: 15%;right: 30%;width: 40%;">
+        <button class="FeideLoginBTN" onclick="SendToFeide()"> Logg inn</button>
+   </div>
+
+</div>
+
+<script>
+    function SendToFeide(){
+        window.location.href="innlogging.html"; // placeholder function until a function that verifies the password and username is made.
+    }
+</script>
+
+</body>
+</html>
