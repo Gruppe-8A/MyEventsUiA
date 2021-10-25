@@ -139,6 +139,9 @@
  
 }
 
+body {
+    margin: 0px;
+}
 .opprett-knapp {
     background-color: #d1002c;
     color: #FFFFFF;
@@ -196,13 +199,14 @@
 
 
 
-.body_event_oversikt {
+.divBodyOversikt {
     text-align: center;
     background-color: #c60c30;
 }
 .headerEventOversikt {
     color: white;
     padding-bottom: 20px;
+    font-size: 35px;
 }
 
 .event-oversikt {
@@ -211,14 +215,23 @@
     margin-right: auto;
     margin-left: auto;
     border-radius: 5px;
+    font-size: 35px;
 }
-.datoEvent {
-    border: 2.5px solid white;
-    color: white;
-    margin-right: auto;
-    margin-left: auto;
-    border-radius: 5px;
-    padding-right: 20px;
-    padding-left: 20px;
+.knappOversikt {
+    width: 200px;
+    height: 60px;
+    font-size: 25px;
 }
 
+.meny {
+    position: fixed;
+    bottom: 0px;
+    height: 60px;
+    width: 100%;
+    background-color: #D1002C;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.menu-btn {
+    text-align: center;
+}
