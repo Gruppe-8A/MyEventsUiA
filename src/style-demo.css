@@ -1,0 +1,86 @@
+/*CSS OVERLORD 
+- style absolutt alle elementer
+*/
+* {
+
+}
+
+/*CSS HTML-ELEMENT KLASSE 
+- store stygge ulven
+- legger til på hele viewport aka visning i nettleser */
+input h1 h2 html body {
+
+}
+
+
+/*CSS KLASSE 
+- med punktum
+- kan brukes uendelig mange ganger */
+.overskrift  {
+    font-size: 40px;
+    font-family: verdana;
+    background-color: #c7c7c7;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid purple;
+    font-weight: normal;
+}
+.innhold  {
+    font-size: 12px;
+    font-family: verdana;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.uia-rod-color { color: #D1002C; }
+.uia-rod-bg { background-color: #D1002C; }
+.uia-rod-border { border: 1px solid #D1002C; }
+
+.fetskrift { font-weight: bold; }
+
+.input-element {
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+/*
+CSS klasser:
+- Overskrifter
+    + H1 H2 liknende
+    + Forskjellig nivå i design
+    + Få css-klasser
+
+- Brødtekst
+    + Så få klasser som mulig
+    + Ingen styling utover tekst-styling
+
+- Innholdselementer
+    + Styling av div span
+    + Border, width, padding
+
+- Form-elementer
+    + input select textarea
+    + Så lik som mulig
+    + Knapper
+
+- Farger og stiler og spesifikke stylinger
+    + Fargepalett
+
+
+/*CSS KLASSE med under-element 
+- Klasse med samme navn arver fra forrige klasse
+- Kan bygge på eller endre/oppdatere verdier*/
+.NavnPaKlasse table {
+
+}
+
+
+/*CSS ID KLASSE 
+- med hashtag i starten
+- referer til et bestemt element*/ 
+#NavnPaKlasse {
+
+}
