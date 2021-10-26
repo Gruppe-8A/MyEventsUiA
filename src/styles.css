@@ -1,5 +1,4 @@
 
-
 @font-face {
     font-family: Muli;
     src: url(fonts/muli/Muli.ttf);
@@ -77,119 +76,18 @@ tilleggsinformasjon {
     padding: 2rem;
 }
 
-
-/* Funksjonell av-og-på-knapp for å merke om arrangementent foregår utendørs */
-
-.switch-2 {
-    position: relative;
-    display: inline-block;
-}
-
-.switch-input-2 {
-    display: none;
-}
-
-.switch-label-2 {
-    display: block;
-    width: 48px;
-    height: 24px;
-    text-indent: -150%;
-    clip: rect(0 0 0 0);
-    color: transparent;
-    user-select: none;
-}
-
-.switch-label-2::before,
-.switch-label-2::after {
-    content: "";
-    display: block;
-    position: absolute;
-    cursor: pointer;
-}
-
-.switch-label-2::before {
-    width: 100%;
-    height: 100%;
-    background-color: #dedede;
-    border-radius: 9999em;
-    -webkit-transition: background-color 0.25s ease;
-    transition: background-color 0.25s ease;
-}
-
-.switch-label-2::after {
-    top: 0;
-    left: 0;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background-color: #fff;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.45);
-    -webkit-transition: left 0.25s ease;
-    transition: left 0.25s ease;
-}
-
-.switch-input-2:checked + .switch-label-2::before {
-    background-color: #89c12d;
-}
-
-.switch-input-2:checked + .switch-label-2::after {
-    left: 24px;
-}
-
-.event-tittel {
-    padding-left: 60%;
-
-}
-
-textarea {
-    width: 30%;
-    height: 120px;
-    padding: 20px 10px;
-    box-sizing: border-box;
-    resize: none;
-
-}
-
-body {
-    margin: 0px;
-}
-.opprett-knapp {
-
 .submit-btn {
-
     background-color: #d1002c;
     color: #FFFFFF;
     text-align: center;
     padding: 16px 64px;
     border: 1px #d1002c;
     cursor: pointer;
-
-    transform: translate(100%, 100%);
-}
-
-/* Last opp bilde */
-
-img {
-    height: 150px;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-lastoppbilde {
-    height: 100vh;
-    width: 100%;
-
-=======
     transition: 0.25s;
 }
 .submit-btn:hover {
     cursor: pointer;
     background-color: #bd0028;
-
 }
 
 .profilbilde {
@@ -202,39 +100,6 @@ lastoppbilde {
     overflow: hidden;
     border: 1px solid gray;
     cursor: pointer;
-
-
-}
-
-#bilde {
-    height: 100%;
-    width: 100%;
-}
-
-#file {
-    display: none;
-}
-
-#uploadBtn {
-    height: 40px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    background: rgba(0, 0, 0, 0.7);
-    color: wheat;
-    line-height: 30px;
-    font-family: sans-serif;
-    font-size: 15px;
-}
-
-.divBodyOversikt {
-    width: 100%;
-    max-width: 500px;
-    background-color: white;
-
 }
 
 .divBodyOversikt {
@@ -294,76 +159,6 @@ html, body {
     position: fixed;
     font-size: 1em;
     border-radius: 50px;
-
-    opacity: 90%;
-    transition: 0.25s;
-}
-.headerEventOversikt {
-    color: red;
-    padding-bottom: 20px;
-    font-size: 1em;
-}
-
-.event-oversikt {
-    border: 2.5px solid grey;
-    color: solid black;
-    margin-right: auto;
-    margin-left: auto;
-    border-radius: 5px;
-    font-size: 35px;
-    white-space: pre;
-}
-#headerOversikt {
-    color: white;
-    font-size: 35px;
-}
-
-.knappOversikt {
-    width: 200px;
-    height: 60px;
-    font-size: 25px;
-    margin-right: 50%;
-    margin-left: 50%;
-}
-
-#søkefeltoversikt {
-    width: 600px;
-    height: 30px;
-    font-family: Calibri;
-    font-size: 25px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-
-}
-#eventOversikt {
-    margin-right: auto;
-    margin-left: auto;
-}
-#ikoner-oversikt{
-    width: 35px;
-    height: 35px;
-}
-.close-line {
-    margin-top: 0px;
-    margin-bottom: 10px;
-    height: 5px;
-    width: 111px;
-    background-color: #737373;
-    border-radius: 5px;
-}
-
-.meny {
-    position: fixed;
-    bottom: 0px;
-    height: 60px;
-    width: 100%;
-    background-color: #D1002C;
-    display: grid;
-    grid-template-columns: auto auto auto;
-}
-.menu-btn {
-    text-align: center;
-}
     background-color: rgba(255, 255, 255, 0.90);
     transition: 0.25s;
 }
