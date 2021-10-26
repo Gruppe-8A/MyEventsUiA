@@ -1,13 +1,36 @@
-
-
+/*Henter inn skrifttypen Muli */
 @font-face {
     font-family: Muli;
     src: url(fonts/muli/Muli.ttf);
 }
 
+/*CSS som gjelder for hele prosjektet; body og html */
+body {
+    margin: 0px;
+    padding: 0px;
+}
+html, body {
+    height: 100%;
+    width: 100vw;
+}
+
 a:link {
     text-decoration: none;
 }
+
+
+/*Skriftstiler: */
+
+.header-text {
+    color: #175676;
+    margin-top: 5px;
+}
+
+.small-text {
+    font-size: 14px;
+}
+
+
 
 .event-oversikt{
     border-color: solid black;
@@ -72,120 +95,20 @@ a:link {
     left: 24px;
 }
 
-tilleggsinformasjon {
-    text-align: center;
-    padding: 2rem;
-}
-
-
-/* Funksjonell av-og-på-knapp for å merke om arrangementent foregår utendørs */
-
-.switch-2 {
-    position: relative;
-    display: inline-block;
-}
-
-.switch-input-2 {
-    display: none;
-}
-
-.switch-label-2 {
-    display: block;
-    width: 48px;
-    height: 24px;
-    text-indent: -150%;
-    clip: rect(0 0 0 0);
-    color: transparent;
-    user-select: none;
-}
-
-.switch-label-2::before,
-.switch-label-2::after {
-    content: "";
-    display: block;
-    position: absolute;
-    cursor: pointer;
-}
-
-.switch-label-2::before {
-    width: 100%;
-    height: 100%;
-    background-color: #dedede;
-    border-radius: 9999em;
-    -webkit-transition: background-color 0.25s ease;
-    transition: background-color 0.25s ease;
-}
-
-.switch-label-2::after {
-    top: 0;
-    left: 0;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background-color: #fff;
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.45);
-    -webkit-transition: left 0.25s ease;
-    transition: left 0.25s ease;
-}
-
-.switch-input-2:checked + .switch-label-2::before {
-    background-color: #89c12d;
-}
-
-.switch-input-2:checked + .switch-label-2::after {
-    left: 24px;
-}
-
 .event-tittel {
     padding-left: 60%;
 
 }
 
-textarea {
-    width: 30%;
-    height: 120px;
-    padding: 20px 10px;
-    box-sizing: border-box;
-    resize: none;
-
-}
-
-body {
-    margin: 0px;
-}
-.opprett-knapp {
-
 .submit-btn {
-
     background-color: #d1002c;
     color: #FFFFFF;
     text-align: center;
     padding: 16px 64px;
     border: 1px #d1002c;
     cursor: pointer;
-
-    transform: translate(100%, 100%);
 }
 
-/* Last opp bilde */
-
-img {
-    height: 150px;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-lastoppbilde {
-    height: 100vh;
-    width: 100%;
-
-=======
-    transition: 0.25s;
-}
 .submit-btn:hover {
     cursor: pointer;
     background-color: #bd0028;
@@ -202,58 +125,12 @@ lastoppbilde {
     overflow: hidden;
     border: 1px solid gray;
     cursor: pointer;
-
-
 }
 
-#bilde {
-    height: 100%;
-    width: 100%;
-}
-
-#file {
-    display: none;
-}
-
-#uploadBtn {
-    height: 40px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    background: rgba(0, 0, 0, 0.7);
-    color: wheat;
-    line-height: 30px;
-    font-family: sans-serif;
-    font-size: 15px;
-}
-
-.divBodyOversikt {
-    width: 100%;
-    max-width: 500px;
-    background-color: white;
-
-}
-
-.divBodyOversikt {
-    text-align: center;
-    background-color: #c60c30;
-}
-.headerEventOversikt {
-    color: white;
-    padding-bottom: 20px;
-    font-size: 35px;
-}
 
 .event-oversikt {
     border: 2.5px solid white;
-    color: white;
-    margin-right: auto;
-    margin-left: auto;
     border-radius: 5px;
-    font-size: 35px;
 }
 .knappOversikt {
     width: 200px;
@@ -275,16 +152,10 @@ lastoppbilde {
 .menu-btn {
     text-align: center;
 }
-
-body {
-    margin: 0px;
-    padding: 0px;
+.menu-btn-img {
+    height: 40px; 
+    margin-top: 10px;
 }
-html, body {
-    height: 100%;
-    width: 100vw;
-}
-
 /*CSS-klasse for styling av laget som ligger over kartet */
 .main-content {
     width: 100%;
@@ -294,8 +165,7 @@ html, body {
     position: fixed;
     font-size: 1em;
     border-radius: 50px;
-
-    opacity: 90%;
+    background: rgba(255, 255, 255, 0.95);
     transition: 0.25s;
 }
 .headerEventOversikt {
@@ -304,15 +174,6 @@ html, body {
     font-size: 1em;
 }
 
-.event-oversikt {
-    border: 2.5px solid grey;
-    color: solid black;
-    margin-right: auto;
-    margin-left: auto;
-    border-radius: 5px;
-    font-size: 35px;
-    white-space: pre;
-}
 #headerOversikt {
     color: white;
     font-size: 35px;
@@ -326,20 +187,7 @@ html, body {
     margin-left: 50%;
 }
 
-#søkefeltoversikt {
-    width: 600px;
-    height: 30px;
-    font-family: Calibri;
-    font-size: 25px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-
-}
-#eventOversikt {
-    margin-right: auto;
-    margin-left: auto;
-}
-#ikoner-oversikt{
+#ikoner-oversikt {
     width: 35px;
     height: 35px;
 }
@@ -364,18 +212,11 @@ html, body {
 .menu-btn {
     text-align: center;
 }
-    background-color: rgba(255, 255, 255, 0.90);
-    transition: 0.25s;
-}
-
-
-
 
 /*CSS-klasse for styling av lukk/sveip-knappen øverst på laget over kartet */
 .content-close {
     width: 100%;
 }
-
 
 /*CSS-klasse for styling av linjen for lukking */
 .close-line {
@@ -402,7 +243,7 @@ html, body {
     font-family: Muli;
 }
 
-.input-event-tittel {
+.input-style {
     height: 45px;
     width: 100%;
     font-size: 25px;
@@ -412,7 +253,7 @@ html, body {
     box-shadow: inset 0 0 3px #bfbfbf;
 }
 
-.input-event-textarea {
+.textarea-st {
     width: 100%;
     height: 160px;
     font-size: 15px;
@@ -421,9 +262,6 @@ html, body {
     border-bottom: 1px solid #D1002C;
     box-shadow: inset 0 0 3px #bfbfbf;
     resize: none;
-}
-.form-header-text {
-    color: #175676;
 }
 
 .tbl {
@@ -444,10 +282,6 @@ html, body {
     box-shadow: inset 0 0 3px #bfbfbf;
     text-align: center;
 }
-.form-text-small {
-    color: #175676;
-    font-size: 14px;
-}
 .tbl-bottom-frm td {
     padding-top: 5px;
 }
@@ -461,24 +295,8 @@ html, body {
 }
 .mapstyle {
     height: calc(100% - 50px); 
-    width: 100%vw; 
-    z-index: 1
-}
-
-@media screen and (min-width: 500px) {
-    .main-content {
-        width: 100%;
-        max-width: 500px;
-        height: 100%;
-        border-radius: 0px;
-    } 
-    .logo {
-        z-index: 999;
-        bottom: 60px;
-        right: 10px;
-        left: auto;
-        top: auto;
-    }
+    width: 100%; 
+    z-index: 0
 }
 
 
@@ -577,6 +395,23 @@ h2 {
     color: #D1002C;
     font-size: 20px;
     text-align:center;
+}
+
+
+@media screen and (min-width: 500px) {
+    .main-content {
+        width: 100%;
+        max-width: 500px;
+        height: 100%;
+        border-radius: 0px;
+    } 
+    .logo {
+        z-index: 999;
+        bottom: 60px;
+        right: 10px;
+        left: auto;
+        top: auto;
+    }
 }
 
 
