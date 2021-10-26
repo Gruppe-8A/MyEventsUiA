@@ -275,3 +275,68 @@ body {
         top: auto;
     }
 }
+
+.profilbilde-jj {
+    height: 119px;
+    width: 120px;
+    border-radius: 60%;
+    margin-top: 40px;
+    margin-left: 177px;
+
+}
+
+.input-epost {
+    width: 320px;
+    height: 20px;
+    border-radius: 4%;
+    border: 0px;
+    border-bottom: 1px solid #d1002c;
+}
+
+.input-telefon {
+    width: 320px;
+    height: 20px;
+    border-radius: 4%;
+    border: 0px;
+    border-bottom: 1px solid #d1002c;
+}
+
+.input-snapchat {
+    width: 320px;
+    height: 20px;
+    border-radius: 4%;
+    border: 0px;
+    border-bottom: 1px solid #d1002c;
+}
+
+.input-instagram {
+    width: 320px;
+    height: 20px;
+    border-radius: 4%;
+    border: 0px;
+    border-bottom: 1px solid #d1002c;
+}
+
+.input-facebook {
+    width: 320px;
+    height: 20px;
+    border-radius: 4%;
+    border: 0px;
+    border-bottom: 1px solid #d1002c;
+}
+
+h4 {
+    color: #666666;
+    text-align: center;
+}
+
+h2 {
+    color: #d1002c;
+    text-align: center;
+    font-size: 20px;
+    font-family: calibri;
+}
+
+.main-content-jj {
+    text-align: center;
+}
