@@ -263,6 +263,10 @@ lastoppbilde {
     margin-right: auto;
     margin-left: auto;
 }
+#ikoner-oversikt{
+    width: 35px;
+    height: 35px;
+}
 
 .meny {
     position: fixed;
