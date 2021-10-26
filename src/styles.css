@@ -212,6 +212,7 @@ lastoppbilde {
     text-align: center;
     background-color: #c60c30;
     font-family: Calibri;
+    padding-bottom: 200px;
 }
 .headerEventOversikt {
     color: white;
@@ -249,7 +250,6 @@ lastoppbilde {
     font-family: Calibri;
     font-size: 25px;
     margin-bottom: 15px;
-    margin-right: 25px;
     border-radius: 5px;
 
 }
