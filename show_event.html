@@ -3,102 +3,52 @@
 <head>
     <title>Visning av Event</title>
     <div class="header">
-
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="src/styles.css">
     </div>
     <meta charset="UTF-8">
 
+    <div class="main-content2">
+        <a href="index.html">
+            <div class="content-close" align="center">
+                <div class='content-title'>EVENT DETALJER</div>
+                <div class="close-line"></div>
     <style>
         h1 {
-            color: antiquewhite;
-            font-size: 30px;
+            color: black;
+            font-size: 20px;
             margin: 0px;
             text-align: center;
 
         }
 
-
-        .event-navn {
-            color: antiquewhite;
-            font-size: 20px;
-            text-align: center;
-
-        }
         body {
             text-align: center;
             background-color: #c60c30;
+            padding-right: 10em;
         }
-        .film-navn
-        {
-            color: antiquewhite;
-            font-size: 20px;
-            text-align:center;
-        }
-        .info
-        {
-            color:black;
-            font-size: 20px;
-            padding-top: 40px;
-            padding-left:0px;
-
-        }
-
-        .info em {
-            color: antiquewhite;
-        }
-
-        .button1
-        {
-            color: white;
-            padding: 10px 30px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-flex;
-            font-size: 16px;
-            margin: 50px;
-            margin-left: 70px;
-            cursor: pointer;
-            border: 2px solid #4CAF50;
-            background-color: black;
-            border-radius: 15px;
-
-        }
-        .img1 {
-            margin: auto 400px;
-            float: right;
-            width: 150px;
-            height: 38px;
-        }
-
 
     </style>
 
 
 </head>
 <body>
-<h1>Event detaljer</h1>
-<div class="event-navn">
+  <img src="img/logo.png" class="logo">
+
+  <div class="event-navn">
     <p> Kino </p>
-</div>
-<div class="film-navn">
+  </div>
+   <div class="film-navn">
     <h2> No Time To Die (Nynorsk tale) </h2>
-</div>
+   </div>
 
+  <div class=img1>
 
-<div class=img1>
-
-<img src="https://p3.no/filmpolitiet/wp-content/thumbs/?src=https://p3.no/filmpolitiet/wp-content/uploads/2021/09/No-Time-to-Die-plakat.jpg&w=750" alt="film-navn" align="right"
-     height="400"
+  <img src="https://p3.no/filmpolitiet/wp-content/thumbs/?src=https://p3.no/filmpolitiet/wp-content/uploads/2021/09/No-Time-to-Die-plakat.jpg&w=750" alt="film-navn" align="right"
+     height="250"
      style="border-radius:50px";>
-</div>
-=======
-
-
-
-
-
-
-
-<div class="info">
+  </div>
+   <div class="info">
     <p> <em> Hvor?</em> </p>
     <h3> Fønix Kino </h3>
 
@@ -107,16 +57,30 @@
 
     <p> <em> Hvem? </em> </p>
     <h3> 5 av dine venner skal på dette </h3>
-</div>
+   </div>
 
-<div class="button1"
-    <button type="button">Jeg vil delta på dette!</button>
+<br>
+<br>
 
-</div>
+  <div align="center">
+    <button id="opprett-event" type="submit" name="opprett-event" class="submit-btn">Jeg vil delta på dette</button>
+  </div>
 
-
-
-
-
+    <div class='meny'>
+    <div class='menu-btn'>
+        <a href="event_oversikt.html">
+            <img src="img/menu.png" alt="meny" style="height: 40px; margin-top: 5px;"/>
+        </a>
+    </div>
+    <div class="menu-btn">
+        <a href="opprett_event.html" class="menu-btn">
+            <img src="img/pluss.png" alt="opprett event" style="height: 40px; margin-top: 5px;"/>
+        </a>
+    </div>
+    <div class="menu-btn">
+        <a href="venner.html" class="menu-btn">
+            <img src="img/friends2.png" alt="venner" style="height: 40px; margin-top: 5px;"/>
+        </a>
+    </div>
 </body>
 </html>
