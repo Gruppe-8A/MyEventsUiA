@@ -254,6 +254,11 @@ html, body {
     width: 70px;
     transition: 0.25s;
 }
+.mapstyle {
+    height: calc(100% - 50px); 
+    width: 100%vw; 
+    z-index: 1
+}
 
 @media screen and (min-width: 500px) {
     .main-content {
@@ -270,3 +275,4 @@ html, body {
         top: auto;
     }
 }
+

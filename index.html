@@ -4,13 +4,22 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <title>Hovedside MyEventsUiA</title>
+
+        <!--Linker til CSS filen for hele nettsiden-->
         <link rel="stylesheet" href="src/styles.css">
-    <link rel="stylesheet" href="src/leafletjs/leaflet.css">
-    <script src="src/leaflet/leaflet-src.js"></script>
+
+        <!--Linker til CSS filen for leaflet for å style kartet-->
+        <link rel="stylesheet" href="src/leafletjs/leaflet.css">
+
+        <!--Linker til javascript filen for leaflet-->
+        <script src="src/leaflet/leaflet-src.js"></script>
     </head>
     <body>
+        <!--Et HTML <img> element for å vise logoen til nettsiden. Logoen er en .png fil for å kunne ha gjennomsiktig bakgrunn. Har brukt css-klassen "logo" som finnes i styles.css filen Logoen vises øverst til venstre på mobilvisning (> 500px), og nede til høyre på skrivebordvisning (<500px) -->
         <img src="img/logo.png" class="logo">
-        <div id="mapid" style="height: calc(100% - 50px); width: 100%vw; z-index: 1"></div>
+
+        <!--Et HTML <div> element (division) for visning av kartet i bakgrunnen. Elementet har id "mapid" som brukes i javascript-koden i bunn for å generere kartet i division-elementet. Elementet har en css-klasse "mapstyle" som finnes i styles.css filen. -->
+        <div id="mapid" class="mapstyle"></div>
 <div class='meny'>
         <div class='menu-btn'>
             <a href="event_oversikt.html">
