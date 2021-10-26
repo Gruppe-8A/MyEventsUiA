@@ -141,29 +141,25 @@ tilleggsinformasjon {
     text-align: center;
 }
 
-
-html { 
-  background: url(../img/map-bg.png) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 body {
-    margin:  0px;
+    margin: 0px;
+    padding: 0px;
+}
+html, body {
+    height: 100%;
+    width: 100vw;
 }
 
 /*CSS-klasse for styling av laget som ligger over kartet */
 .main-content {
     width: 100%;
     max-width: 500px;
-    background-color: white;
     height: 95%;
     bottom:  0px;
     position: fixed;
     font-size: 1em;
     border-radius: 50px;
-    opacity: 90%;
+    background-color: rgba(255, 255, 255, 0.90);
     transition: 0.25s;
 }
 
@@ -258,6 +254,11 @@ body {
     width: 70px;
     transition: 0.25s;
 }
+.mapstyle {
+    height: calc(100% - 50px); 
+    width: 100%vw; 
+    z-index: 1
+}
 
 @media screen and (min-width: 500px) {
     .main-content {
@@ -265,7 +266,6 @@ body {
         max-width: 500px;
         height: 100%;
         border-radius: 0px;
-        background-color: rgba(255, 255, 255, 0.60);
     } 
     .logo {
         z-index: 999;
@@ -275,3 +275,4 @@ body {
         top: auto;
     }
 }
+
