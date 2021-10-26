@@ -2,12 +2,15 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <title>Hovedside MyEventsUiA</title>
         <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/leafletjs/leaflet.css">
+    <script src="src/leaflet/leaflet-src.js"></script>
     </head>
     <body>
         <img src="img/logo.png" class="logo">
+        <div id="mapid" style="height: calc(100% - 50px); width: 100%vw; z-index: 1"></div>
 <div class='meny'>
         <div class='menu-btn'>
             <a href="event_oversikt.html">
@@ -25,5 +28,16 @@
             </a>
         </div>
     </div>
+    <script type="text/javascript">
+        var mymap = L.map('mapid').setView([58.15, 8.0], 14);
+
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoidGhlb2Rvcmx1aWEiLCJhIjoiY2t2N3VkcmVjMjdzeDJ2b3Y5dXlqdmNsdyJ9.XsUMsGHxV7fIKZUxUaALng', {
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: 'pk.eyJ1IjoidGhlb2Rvcmx1aWEiLCJhIjoiY2t2N3VkcmVjMjdzeDJ2b3Y5dXlqdmNsdyJ9.XsUMsGHxV7fIKZUxUaALng'
+}).addTo(mymap);
+    </script>
     </body>
     </html> 
