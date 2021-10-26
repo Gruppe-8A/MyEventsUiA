@@ -3,8 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <title>Innlogging_Feide</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
 </head>
-<body>
+<style>
+    @font-face {
+        font-family: Muli;
+        src: url(src/fonts/muli/Muli.ttf);
+    }
+body{
+background-color: #C5D4E7;
+color: #020202;
+font-family: 'Muli', sans-serif;
+line-height: 1.25rem;
+overflow: auto;
 
+    }
+ .MainBox{
+ align-self: center;
+ margin: 0% 30% 0% 30%;
+ background-color: white;
+ height: 100%;
+ padding: 1em;
+ }
+ .Mainhead{
+     background-color: #DBE5F1;
+     padding: 0.3em;
+     padding-right: 1.5em;
+     margin: -1em;
+ }
+ .MainInnerBox{
+     padding: 2% 2% 2% 2%;
+ }
+ .LoginInput{
+    display: inline-block;
+    width: 98%;
+    height: 50px;
+    
+    background-color: white;
+    border: 2px solid #606ca5;
+    color: #020202;
+    display: block;
+    font: 600 20px/25px 'Muli';
+    
+ }
+ .LoginInput:hover{
+
+ }
+ .SubmitBTN{
+ background-color: #92B9ED;
+ border: 0;
+ color: #020202;
+ cursor: pointer;
+ display: block;
+ font: 400 1rem/1.25rem 'Muli';
+ margin-bottom: 1rem;
+ padding: 0 1rem;
+ text-align: center;
+ transition: background-color 0.5s ease;
+ height: 4.125rem;
+ width: 100%;
+ }
+ .SubmitBTN:hover{
+     color: white;
+    background-color: #283678;
+ }
+</style>
+<body>
+<div class="MainBox">
+    <nav class="Mainhead">
+        <div style="background-color: #DBE5F1;"> <p style="text-align: right;"><img src="img\NO.png" alt="NO" style="width: 2.75em; height: 2em;vertical-align: -0.7em;"> Bokmål <p> </div>
+    </nav>
+<div class="MainInnerBox">
+<h1>Logg inn med Feide</h1>
+<br>
+<h0>Du må logge deg på via Feide for å få tilgang til MyEventsUiA.</h0>
+<br>
+<hr style="color: #DBE5F1; width: 80%; text-align: center;">  
+<b>Din tilhørighet</b>
+<p><img src="img\UiA logo.png" alt="UiA" style="width: 3.8em; height:4em;"> Universitetet i Agder</p>
+
+<hr style="color: #DBE5F1; width: 80%; text-align: center;"> 
+
+    <div>
+    <strong> Brukernavn</strong>
+    <input type="text" class="LoginInput">
+    <br>
+    <strong> Passord</strong>
+    <input type="text" class="LoginInput">
+    <br>
+    <h0 style="text-decoration: underline;color: blue;">Glemt brukernavn eller passord?</h1>
+    </div>
+        <div style="margin-top: 2em;">
+        <button class="SubmitBTN" onclick="SendToMenu()"> Logg inn</button>
+          
+           <div>
+           <hr style="color: #DBE5F1; width: 95%; text-align: center;">   
+           <p style="text-decoration: underline;color: blue;text-align: center;">‎‎   Trenger du hjelp?</p>
+           <hr style="color: #DBE5F1; width: 95%; text-align: center;">
+           </div>  
+           </div>
+</div>
+</div>
+<script>
+    function SendToMenu(){
+        window.location.href="index.html"; // placeholder function until a function that verifies the password and username is made.
+    }
+</script>
 </body>
 </html>

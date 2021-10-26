@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <title>Hovedside MyEventsUiA</title>
+
+        <!--Linker til CSS filen for hele nettsiden-->
+        <link rel="stylesheet" href="src/styles.css">
+
+        <!--Linker til CSS filen for leaflet for å style kartet-->
+        <link rel="stylesheet" href="src/leaflet/leaflet.css">
+
+        <!--Linker til javascript filen for leaflet-->
+        <script src="src/leaflet/leaflet-src.js"></script>
+    </head>
+    <body>
+        <!--Et HTML <img> element for å vise logoen til nettsiden. Logoen er en .png fil for å kunne ha gjennomsiktig bakgrunn. Har brukt css-klassen "logo" som finnes i styles.css filen Logoen vises øverst til venstre på mobilvisning (> 500px), og nede til høyre på skrivebordvisning (<500px) -->
+        <img src="img/logo.png" class="logo">
+
+        <!--Et HTML <div> element (division) for visning av kartet i bakgrunnen. Elementet har id "mapid" som brukes i javascript-koden i bunn for å generere kartet i division-elementet. Elementet har en css-klasse "mapstyle" som finnes i styles.css filen. -->
+        <div id="mapid" class="mapstyle"></div>
+
+        <!-- Starten på menyen. Hele meny-linjen består av et <div>-element som har CSS-klassen "meny" som finnes i styles.css filen -->
+        <div class='meny'>
+            <!-- En av tre knapper som er like utenom bildefilen. CSS klassen "menu-btn" definerer rammen for knappene, men det er bildefilen som er selve linken. <a>-elementet er derfor plassert innenfor div med CSS-klasse "menu-btn", men rundt <img>-elementet med bildefilen.-->
+            <div class='menu-btn'>
+                <a href="event_oversikt.html">
+                    <img src="img/menu.png" alt="Event oversikt"/>
+                </a>
+            </div>
+            <div class="menu-btn">
+                <a href="opprett_event.html" class="menu-btn">
+                    <img src="img/pluss.png" alt="Opprett event" class="menu-btn-img"/>
+                </a>
+            </div>
+            <div class="menu-btn">
+                <a href="venner.html" class="menu-btn">
+                    <img src="img/friends2.png" alt="Venner" class="menu-btn-img"/>
+                </a>
+            </div>
+    </div>
+
+    <!--Start på javascriptet i denne filen -->
+    <script type="text/javascript">
+
+        //Definerer variabel "mymap" og setter preferansene som er nødvendig for å skrive ut kartet i diven "mapid"
+        //L.map: Referer til "leaflet" sin initiering av kart
+        //setView: Setter lengdegrad og breddegrad, samt zoom-nivå (eks: setView([lengdegrad, breddegrad], zoom-nivå))
+        var mymap = L.map('mapid').setView([58.15, 8.0], 14);
+
+        //L.tileLayer setter preferanser for hvilken kartmotor som kan benyttes, og hvilke innstillinger for visningen av dette skal gjelde. Vi har benyttet oss av mapbox sitt API og har generert et "access token" gjennom siden deres ved bruk av en gratis-konto.
+        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoidGhlb2Rvcmx1aWEiLCJhIjoiY2t2N3VkcmVjMjdzeDJ2b3Y5dXlqdmNsdyJ9.XsUMsGHxV7fIKZUxUaALng', {
+            maxZoom: 18, //Beskriver hvor nært brukeren kan zoome i kartet
+            id: 'mapbox/streets-v11', //Definerer hvilke kartgrunnlag som skal benyttes
+            tileSize: 512, //Definerer hvilken størrelse det skal være på de enkelte kartflisene som lastes inn. 
+            zoomOffset: -1, //Definerer hvor mange zoom-nivåer som hver kartflis skal avvike fra
+            accessToken: 'pk.eyJ1IjoidGhlb2Rvcmx1aWEiLCJhIjoiY2t2N3VkcmVjMjdzeDJ2b3Y5dXlqdmNsdyJ9.XsUMsGHxV7fIKZUxUaALng' //Definerer tilgangskoden som brukes for å kunne benytte kartmotoren mapbox har tilgjengelig. Det er tillatt med 25 000 brukere i måneden med denne tilgangskoden
+}).addTo(mymap); //Avslutter og tillegger alle verdier til variabelen "mymap"
+    </script>
+    </body>
+    </html> 

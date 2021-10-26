@@ -1,5 +1,14 @@
 
 
+@font-face {
+    font-family: Muli;
+    src: url(fonts/muli/Muli.ttf);
+}
+
+a:link {
+    text-decoration: none;
+}
+
 .event-oversikt{
     border-color: solid black;
     border: 1 px;
@@ -67,6 +76,7 @@ tilleggsinformasjon {
     text-align: center;
     padding: 2rem;
 }
+
 
 /* Funksjonell av-og-på-knapp for å merke om arrangementent foregår utendørs */
 
@@ -144,12 +154,16 @@ body {
     margin: 0px;
 }
 .opprett-knapp {
+
+.submit-btn {
+
     background-color: #d1002c;
     color: #FFFFFF;
     text-align: center;
     padding: 16px 64px;
     border: 1px #d1002c;
     cursor: pointer;
+
     transform: translate(100%, 100%);
 }
 
@@ -169,6 +183,13 @@ lastoppbilde {
     height: 100vh;
     width: 100%;
 
+=======
+    transition: 0.25s;
+}
+.submit-btn:hover {
+    cursor: pointer;
+    background-color: #bd0028;
+
 }
 
 .profilbilde {
@@ -181,6 +202,7 @@ lastoppbilde {
     overflow: hidden;
     border: 1px solid gray;
     cursor: pointer;
+
 
 }
 
@@ -212,11 +234,67 @@ lastoppbilde {
     width: 100%;
     max-width: 500px;
     background-color: white;
+
+}
+
+.divBodyOversikt {
+    text-align: center;
+    background-color: #c60c30;
+}
+.headerEventOversikt {
+    color: white;
+    padding-bottom: 20px;
+    font-size: 35px;
+}
+
+.event-oversikt {
+    border: 2.5px solid white;
+    color: white;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;
+    font-size: 35px;
+}
+.knappOversikt {
+    width: 200px;
+    height: 60px;
+    font-size: 25px;
+}
+
+.meny {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    height: 50px;
+    width: 100%;
+    background-color: #D1002C;
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: auto auto auto;
+}
+.menu-btn {
+    text-align: center;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+html, body {
+    height: 100%;
+    width: 100vw;
+}
+
+/*CSS-klasse for styling av laget som ligger over kartet */
+.main-content {
+    width: 100%;
+    max-width: 500px;
     height: 95%;
     bottom:  0px;
     position: fixed;
     font-size: 1em;
     border-radius: 50px;
+
     opacity: 90%;
     transition: 0.25s;
 }
@@ -286,3 +364,152 @@ lastoppbilde {
 .menu-btn {
     text-align: center;
 }
+    background-color: rgba(255, 255, 255, 0.90);
+    transition: 0.25s;
+}
+
+
+
+
+/*CSS-klasse for styling av lukk/sveip-knappen øverst på laget over kartet */
+.content-close {
+    width: 100%;
+}
+
+
+/*CSS-klasse for styling av linjen for lukking */
+.close-line {
+    margin-top: 0px;
+    height: 5px;
+    width: 111px;
+    background-color: #737373;
+    border-radius: 5px;
+}
+
+/*CSS-klasse for styling av tittelen over lukke-linjen i laget over kartet */
+.content-title {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #D1002C;
+    font-family: Muli;
+}
+
+/*Styling for div i laget som ligger over kartet */
+.content {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    font-family: Muli;
+}
+
+.input-event-tittel {
+    height: 45px;
+    width: 100%;
+    font-size: 25px;
+    color: #D1002C;
+    border: 0px;
+    border-bottom: 1px solid #D1002C;
+    box-shadow: inset 0 0 3px #bfbfbf;
+}
+
+.input-event-textarea {
+    width: 100%;
+    height: 160px;
+    font-size: 15px;
+    color: #D1002C;
+    border: 0px;
+    border-bottom: 1px solid #D1002C;
+    box-shadow: inset 0 0 3px #bfbfbf;
+    resize: none;
+}
+.form-header-text {
+    color: #175676;
+}
+
+.tbl {
+    width: 100%;
+}
+.tbl td {
+    width:  50%;
+    text-align: center;
+}
+
+.input-event-antall {
+    height: 25px;
+    width: 100%;
+    font-size: 15px;
+    color: #D1002C;
+    border: 0px;
+    border-bottom: 1px solid #D1002C;
+    box-shadow: inset 0 0 3px #bfbfbf;
+    text-align: center;
+}
+.form-text-small {
+    color: #175676;
+    font-size: 14px;
+}
+.tbl-bottom-frm td {
+    padding-top: 5px;
+}
+
+.logo {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    width: 70px;
+    transition: 0.25s;
+}
+.mapstyle {
+    height: calc(100% - 50px); 
+    width: 100%vw; 
+    z-index: 1
+}
+
+@media screen and (min-width: 500px) {
+    .main-content {
+        width: 100%;
+        max-width: 500px;
+        height: 100%;
+        border-radius: 0px;
+    } 
+    .logo {
+        z-index: 999;
+        bottom: 60px;
+        right: 10px;
+        left: auto;
+        top: auto;
+    }
+}
+
+.event-navn {
+    color: #D1002C;
+    font-size: 20px;
+    text-align: center;
+}
+
+.info {
+    color: #D1002C;
+    font-size: 13px;
+    padding-top: 30px;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.info em {
+    color: #175676;
+}
+
+.img1 {
+    margin: auto 15px;
+    float: right;
+    width: 40px;
+    height: 50px;
+}
+
+.film-navn
+{
+    color: #D1002C;
+    font-size: 20px;
+    text-align:center;
+}
+
