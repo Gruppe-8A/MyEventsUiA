@@ -19,6 +19,11 @@ a:link {
 }
 
 
+/*Fargestiler */
+.uia-rod-color { color: #D1002C; }
+.uia-rod-bg { background-color: #D1002C; }
+
+
 /*Skriftstiler: */
 
 .header-text {
@@ -360,6 +365,19 @@ a:link {
     text-align:center;
 }
 
+.map-div-icon {
+    width: 120px;
+    height: 90px;
+    text-align: center;
+}
+.map-icon-text {
+    font-size: 14px;
+    padding: 3px;
+    text-shadow: lightgray 1px 0 10px;
+    background: rgba(255, 255, 255, 0.90);
+    border-radius: 3px;
+}
+
 .venne-ikon{
     max-width: 50%;
     height: auto;
@@ -394,23 +412,6 @@ a:link {
 }
 
 
-
-@media screen and (min-width: 500px) {
-    .main-content {
-        width: 100%;
-        max-width: 500px;
-        height: 100%;
-        border-radius: 0px;
-    } 
-    .logo {
-        z-index: 999;
-        bottom: 60px;
-        right: 10px;
-        left: auto;
-        top: auto;
-    }
-}
-
 .profil-logo {
     position: fixed;
     right: 10px;
@@ -434,8 +435,4 @@ a:link {
         left: auto;
         bottom: auto;
     }
-}
-
-}
-
 }
