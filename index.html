@@ -16,11 +16,14 @@
     </head>
     <body>
         <!--Et HTML <img> element for å vise logoen til nettsiden. Logoen er en .png fil for å kunne ha gjennomsiktig bakgrunn. Har brukt css-klassen "logo" som finnes i styles.css filen Logoen vises øverst til venstre på mobilvisning (> 500px), og nede til høyre på skrivebordvisning (<500px) -->
-        <img src="img/logo.png" class="logo">
+        <img src="img/logo.png" class="logo" alt="UiA">
 
         <!--Et HTML <div> element (division) for visning av kartet i bakgrunnen. Elementet har id "mapid" som brukes i javascript-koden i bunn for å generere kartet i division-elementet. Elementet har en css-klasse "mapstyle" som finnes i styles.css filen. -->
         <div id="mapid" class="mapstyle"></div>
 
+        <a href="profil.html">
+        <img src="img/profilknapp.png" class="profil-logo">
+        </a>
         <!-- Starten på menyen. Hele meny-linjen består av et <div>-element som har CSS-klassen "meny" som finnes i styles.css filen -->            
              <div class='meny'>
                 <!-- En av tre knapper som er like utenom bildefilen. CSS klassen "menu-btn" definerer rammen for knappene, men det er bildefilen som er selve linken. <a>-elementet er derfor plassert innenfor div med CSS-klasse "menu-btn", men rundt <img>-elementet med bildefilen.-->

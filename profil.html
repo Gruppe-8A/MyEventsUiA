@@ -4,34 +4,50 @@
     <meta charset="UTF-8">
     <title>Profile</title>
     <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="src/leaflet/leaflet.css">
+    <script src="src/leaflet/leaflet-src.js"></script>
 </head>
 
 <body>
+
+<img src="img/logo.png" class="logo" alt="UiA">
+<div id="mapid" class="mapstyle"></div>
+
 <div class="main-content">
-            <img src="https://www.ebony.com/wp-content/uploads/2016/07/Black-Male-Student-Caro_original_57029-800x500.jpg"
+    <a href="index.html">
+        <div class="content-close" align="center">
+            <div class='content-title'>PROFIL OG INNSTILLINGER</div>
+            <div class="close-line"></div>
+        </div>
+    </a>
+            <img src="img/jasonjackson.jpeg"
                  alt="profilbilde" class="profilbilde-jj">
 
-    <h2>Jason Jackson</h2>
-
-<form class="main-content-jj">
-    <h4>E-post</h4><br>
-    <input type="text" id="Epost" name="Epost" placeholder="E-post" class="input-epost">
+    <div class="overskrift">Jason Jackson</div>
+<div class="content">
+<form>
+    <div>E-post</div>
+    <input type="text" id="Epost" name="Epost" placeholder="E-post" class="input-profil">
     <br>
-    <h4>Telefon</h4>
-    <input type="number" id="Telefon" name="Telefon" placeholder="Telefon" class="input-telefon">
+    <div class="profil-input">Telefon</div>
+    <input type="number" id="Telefon" name="Telefon" placeholder="Telefon" class="input-profil">
     <br>
-    <h4>Snapchat</h4>
-    <input type="text" id="Snapchat" name="Snapchat" placeholder="Snapchat" class="input-snapchat">
+    <div class="profil-input">Snapchat</div>
+    <input type="text" id="Snapchat" name="Snapchat" placeholder="Snapchat" class="input-profil">
     <br>
-    <h4>Instagram</h4>
-    <input type="text" id="Instagram" name="Instagram" placeholder="Instagram" class="input-instagram">
+    <div class="profil-input">Instagram</div>
+    <input type="text" id="Instagram" name="Instagram" placeholder="Instagram" class="input-profil">
     <br>
-    <h4>Facebook</h4>
-    <input type="text" id="Facebook" name="Facebook" placeholder="Facebook" class="input-facebook">
+    <div class="profil-input">Facebook</div>
+    <input type="text" id="Facebook" name="Facebook" placeholder="Facebook" class="input-profil">
 </form>
-
+<br>
+    <br>
+    <div align="center">
     <button type="submit" id="Lagre-profil" name="Lagre-profil" class="submit-btn">Lagre profil</button>
-
+        </div>
+</div>
+</div>
     <div class='meny'>
         <div class='menu-btn'>
             <a href="event_oversikt.html">
@@ -48,5 +64,25 @@
                 <img src="img/friends2.png" alt="venner" style="height: 40px; margin-top: 5px;"/>
             </a>
         </div>
+    </div>
+
+<script type="text/javascript">
+
+    //Definerer variabel "mymap" og setter preferansene som er nødvendig for å skrive ut kartet i diven "mapid"
+    //L.map: Referer til "leaflet" sin initiering av kart
+    //setView: Setter lengdegrad og breddegrad, samt zoom-nivå (eks: setView([lengdegrad, breddegrad], zoom-nivå))
+    var mymap = L.map('mapid').setView([58.15, 8.0], 14);
+
+    //L.tileLayer setter preferanser for hvilken kartmotor som kan benyttes, og hvilke innstillinger for visningen av dette skal gjelde. Vi har benyttet oss av mapbox sitt API og har generert et "access token" gjennom siden deres ved bruk av en gratis-konto.
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoidGhlb2Rvcmx1aWEiLCJhIjoiY2t2N3VkcmVjMjdzeDJ2b3Y5dXlqdmNsdyJ9.XsUMsGHxV7fIKZUxUaALng', {
+        maxZoom: 18, //Beskriver hvor nært brukeren kan zoome i kartet
+        id: 'mapbox/streets-v11', //Definerer hvilke kartgrunnlag som skal benyttes
+        tileSize: 512, //Definerer hvilken størrelse det skal være på de enkelte kartflisene som lastes inn.
+        zoomOffset: -1, //Definerer hvor mange zoom-nivåer som hver kartflis skal avvike fra
+        accessToken: 'pk.eyJ1IjoidGhlb2Rvcmx1aWEiLCJhIjoiY2t2N3VkcmVjMjdzeDJ2b3Y5dXlqdmNsdyJ9.XsUMsGHxV7fIKZUxUaALng' //Definerer tilgangskoden som brukes for å kunne benytte kartmotoren mapbox har tilgjengelig. Det er tillatt med 25 000 brukere i måneden med denne tilgangskoden
+    }).addTo(mymap); //Avslutter og tillegger alle verdier til variabelen "mymap"
+</script>
+
+
 </body>
 </html>
