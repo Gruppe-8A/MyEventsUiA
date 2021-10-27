@@ -88,7 +88,7 @@ a:link {
 }
 
 .switch-input:checked + .switch-label::before {
-    background-color: #89c12d;
+    background-color: #d1002c;
 }
 
 .switch-input:checked + .switch-label::after {
