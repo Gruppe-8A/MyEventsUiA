@@ -311,7 +311,7 @@ a:link {
 
 }
 
-.input-epost {
+.input-profil {
     width: 320px;
     height: 20px;
     border-radius: 4%;
@@ -319,52 +319,12 @@ a:link {
     border-bottom: 1px solid #d1002c;
 }
 
-.input-telefon {
-    width: 320px;
-    height: 20px;
-    border-radius: 4%;
-    border: 0px;
-    border-bottom: 1px solid #d1002c;
-}
-
-.input-snapchat {
-    width: 320px;
-    height: 20px;
-    border-radius: 4%;
-    border: 0px;
-    border-bottom: 1px solid #d1002c;
-}
-
-.input-instagram {
-    width: 320px;
-    height: 20px;
-    border-radius: 4%;
-    border: 0px;
-    border-bottom: 1px solid #d1002c;
-}
-
-.input-facebook {
-    width: 320px;
-    height: 20px;
-    border-radius: 4%;
-    border: 0px;
-    border-bottom: 1px solid #d1002c;
-}
-
-.profil-input {
-    text-align: left;
-
-}
- .overskrift1 {
+ .overskrift {
     color: #d1002c;
     text-align: center;
     font-size: 25px;
     font-family: calibri;
      margin-top: 5px;
-}
-
-.main-content-jj {
-    text-align: center;
 }
 
 .event-navn {
