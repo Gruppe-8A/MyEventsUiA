@@ -58,6 +58,23 @@
             zoomOffset: -1, //Definerer hvor mange zoom-nivåer som hver kartflis skal avvike fra
             accessToken: 'pk.eyJ1IjoidGhlb2Rvcmx1aWEiLCJhIjoiY2t2N3VkcmVjMjdzeDJ2b3Y5dXlqdmNsdyJ9.XsUMsGHxV7fIKZUxUaALng' //Definerer tilgangskoden som brukes for å kunne benytte kartmotoren mapbox har tilgjengelig. Det er tillatt med 25 000 brukere i måneden med denne tilgangskoden
 }).addTo(mymap); //Avslutter og tillegger alle verdier til variabelen "mymap"
+
+        var greenIcon = L.icon({
+            iconUrl: 'img/marker.png',
+
+            iconSize:     [38, 70],
+            iconAnchor:   [22, 94],
+            popupAnchor:  [-3, -76]
+        });
+
+        let marker = L.marker([58.14299314715035, 7.995202357269564], {icon: greenIcon}).addTo(mymap);
+
+        marker.on('click', ()=> {this.onMarkerClicked()});
+
+
+
     </script>
     </body>
-    </html> 
+    </html>
+    /*var point = [58.14299314715035, 7.995202357269564];
+    L.marker(point).addTo(mymap);
