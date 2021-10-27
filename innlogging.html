@@ -47,6 +47,8 @@ overflow: auto;
     
  }
  .LoginInput:hover{
+    border:6px solid #606ca5;
+
 
  }
  .SubmitBTN{
@@ -67,6 +69,33 @@ overflow: auto;
      color: white;
     background-color: #283678;
  }
+
+ @media screen and (max-width: 1000px){
+
+    .MainBox{
+ align-self: center;
+ margin: 0% 3% 0% 3%;
+ background-color: white;
+ height: 100%;
+ padding: 1em;
+ }
+.TitleFeide{
+margin:  0.1px -5px;
+    
+}
+
+ .Mainhead{
+     background-color: #DBE5F1;
+     padding: 0.3em;
+     padding-right: 1.5em;
+     margin: -1em -15.8px 1em;
+     width: 101%;
+     
+ }
+
+ }
+
+
 </style>
 <body>
 <div class="MainBox">
@@ -74,7 +103,7 @@ overflow: auto;
         <div style="background-color: #DBE5F1;"> <p style="text-align: right;"><img src="img\NO.png" alt="NO" style="width: 2.75em; height: 2em;vertical-align: -0.7em;"> Bokmål <p> </div>
     </nav>
 <div class="MainInnerBox">
-<h1>Logg inn med Feide</h1>
+<h1 class="TitleFeide">Logg inn med Feide</h1>
 <br>
 <h0>Du må logge deg på via Feide for å få tilgang til MyEventsUiA.</h0>
 <br>
