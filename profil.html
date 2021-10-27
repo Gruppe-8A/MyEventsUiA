@@ -20,7 +20,7 @@
             <div class="close-line"></div>
         </div>
     </a>
-            <img src="img/jasonjackson.jpeg"
+            <img src="img/Jason.jpg"
                  alt="profilbilde" class="profilbilde-jj">
 
     <div class="overskrift">Jason Jackson</div>
@@ -67,22 +67,8 @@
     </div>
 
 <script type="text/javascript">
-
-    //Definerer variabel "mymap" og setter preferansene som er nødvendig for å skrive ut kartet i diven "mapid"
-    //L.map: Referer til "leaflet" sin initiering av kart
-    //setView: Setter lengdegrad og breddegrad, samt zoom-nivå (eks: setView([lengdegrad, breddegrad], zoom-nivå))
-    var mymap = L.map('mapid').setView([58.15, 8.0], 14);
-
-    //L.tileLayer setter preferanser for hvilken kartmotor som kan benyttes, og hvilke innstillinger for visningen av dette skal gjelde. Vi har benyttet oss av mapbox sitt API og har generert et "access token" gjennom siden deres ved bruk av en gratis-konto.
-    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoidGhlb2Rvcmx1aWEiLCJhIjoiY2t2N3VkcmVjMjdzeDJ2b3Y5dXlqdmNsdyJ9.XsUMsGHxV7fIKZUxUaALng', {
-        maxZoom: 18, //Beskriver hvor nært brukeren kan zoome i kartet
-        id: 'mapbox/streets-v11', //Definerer hvilke kartgrunnlag som skal benyttes
-        tileSize: 512, //Definerer hvilken størrelse det skal være på de enkelte kartflisene som lastes inn.
-        zoomOffset: -1, //Definerer hvor mange zoom-nivåer som hver kartflis skal avvike fra
-        accessToken: 'pk.eyJ1IjoidGhlb2Rvcmx1aWEiLCJhIjoiY2t2N3VkcmVjMjdzeDJ2b3Y5dXlqdmNsdyJ9.XsUMsGHxV7fIKZUxUaALng' //Definerer tilgangskoden som brukes for å kunne benytte kartmotoren mapbox har tilgjengelig. Det er tillatt med 25 000 brukere i måneden med denne tilgangskoden
-    }).addTo(mymap); //Avslutter og tillegger alle verdier til variabelen "mymap"
+    <script src="src/MyEventsUiA-leaflet.js">
 </script>
-
 
 </body>
 </html>
