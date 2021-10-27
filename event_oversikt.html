@@ -1,180 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event oversikt</title>
-    <link rel="stylesheet" href="src/styles.css">
-</head>
-<body>
-<div class="main-content">
-    <header class="headerEventOversikt">Event-oversikt</header>
-      <div class="close-line"></div>
-      <img src="img/logo.png" class="logo">
-
-    <input id="søkefeltoversikt" type="text" placeholder="Søk...">
-
-    <table id="eventOversikt">
-        <tr>
-            <td class="event-oversikt"><img src="src/ikoner/home.png" id="ikoner-oversikt"></td>
-            <td class="event-oversikt">Bursdagsfest:<p>21.09.21</p></td>
-            <td class="event-oversikt">Maks  <p>24</p></td>
-        </tr>
-        <tr>
-            <td class="event-oversikt"><img src="src/ikoner/clapperboard.png" id="ikoner-oversikt"></td>
-            <td class="event-oversikt"><a href="show_event.html">No time to die (Nynorsk tale)<p>12.11.21</p></a></td>
-            <td class="event-oversikt">Maks ant<p>320</p></td>
-            <!-- La til link til show event siden, legge dette til på alle event tekstene? -->
-        </tr>
-        <tr>
-            <td class="event-oversikt"><img src="src/ikoner/book.png" id="ikoner-oversikt"></td>
-            <td class="event-oversikt">Bokklubb<p>30.10.21</p></td>
-            <td class="event-oversikt">Maks ant <p>8</p></td>
-        </tr>
-        <tr>
-            <td class="event-oversikt"><img src="src/ikoner/flash.png" id="ikoner-oversikt"></td>
-            <td class="event-oversikt">Rumpeldunk<p>25.11.21</p></td>
-            <td class="event-oversikt">Maks ant. <p>24</p></td>
-        </tr>
-        <tr>
-            <td class="event-oversikt"><img src="src/ikoner/christmas-tree.png" id="ikoner-oversikt"></td>
-            <td class="event-oversikt">Julekro<p>18.12.21</p></td>
-            <td class="event-oversikt">Maks ant <p>75</p></td>
-        </tr>
-        <tr>
-            <td colspan="3"><button class="knappOversikt" onclick="tableRow()">Se flere events</button></td>
-        </tr>
-
-
-
-    </table>
-    <div class='meny'>
-        <div class='menu-btn'>
-            <a href="event_oversikt.html">
-                <img src="img/menu.png" style="height: 50px; margin-top: 5px;"/>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Event oversikt</title>
+        <link rel="stylesheet" href="src/styles.css">
+        <link rel="stylesheet" href="src/leaflet/leaflet.css">
+        <script src="src/leaflet/leaflet-src.js"></script>
+    </head>
+    <body>
+        <img src="img/logo.png" class="logo">
+        <div id="mapid" class="mapstyle"></div>
+        <div class="main-content">
+            <a href="index.html">
+                <div class="content-close" align="center">
+                    <div class='content-title'>EVENTOVERSIKT</div>
+                    <div class="close-line"></div>
+                </div>
             </a>
+            <div class='content'>
+                <input class="input-style" type="text" placeholder="Søk...">
+                <table id="eventOversikt">
+                    <tr>
+                        <td class="event-oversikt"><img src="src/ikoner/home.png" id="ikoner-oversikt"></td>
+                        <td class="event-oversikt">Bursdagsfest:<p>21.09.21</p></td>
+                        <td class="event-oversikt">Maks  <p>24</p></td>
+                    </tr>
+                    <tr>
+                        <td class="event-oversikt"><img src="src/ikoner/clapperboard.png" id="ikoner-oversikt"></td>
+                        <td class="event-oversikt"><a href="show_event.html">No time to die (Nynorsk tale)<p>12.11.21</p></a></td>
+                        <td class="event-oversikt">Maks ant<p>320</p></td>
+                        <!-- La til link til show event siden, legge dette til på alle event tekstene? -->
+                    </tr>
+                    <tr>
+                        <td class="event-oversikt"><img src="src/ikoner/book.png" id="ikoner-oversikt"></td>
+                        <td class="event-oversikt">Bokklubb<p>30.10.21</p></td>
+                        <td class="event-oversikt">Maks ant <p>8</p></td>
+                    </tr>
+                    <tr>
+                        <td class="event-oversikt"><img src="src/ikoner/flash.png" id="ikoner-oversikt"></td>
+                        <td class="event-oversikt">Rumpeldunk<p>25.11.21</p></td>
+                        <td class="event-oversikt">Maks ant. <p>24</p></td>
+                    </tr>
+                    <tr>
+                        <td class="event-oversikt"><img src="src/ikoner/christmas-tree.png" id="ikoner-oversikt"></td>
+                        <td class="event-oversikt">Julekro<p>18.12.21</p></td>
+                        <td class="event-oversikt">Maks ant <p>75</p></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><button class="submit-btn" onclick="tableRow()">Se flere events</button></td>
+                    </tr>
+                </table>
+            </div>
         </div>
-        <div class="menu-btn">
-            <a href="opprett_event.html" class="menu-btn">
-                <img src="img/pluss.png" style="height: 50px; margin-top: 5px;"/>
-            </a>
-        </div>
-        <div class="menu-btn">
-            <a href="venner.html" class="menu-btn">
-                <img src="img/friends2.png" style="height: 50px; margin-top: 5px;"/>
-            </a>
-        </div>
-    </div>
-
-</div>
-<script>
-//Funksjon for å legge inn flere events eller rader. metode hentet fra https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/insertRow sett 21.10.21
-    function tableRow() {
-        var table = document.getElementById('eventOversikt')
-        var row = table.insertRow(5);
-        var cell1 = row.insertCell(-1);
-        var cell2 = row.insertCell(-1);
-        var cell3 = row.insertCell(-1);
-        cell1.innerHTML = 'Icon';
-        cell2.innerHTML = 'Rumpeldunk';
-        cell3.innerHTML = 'Maks ant.:420';
-        cell1.style.border = '2.5px solid grey';
-        cell2.style.border = '2.5px solid grey';
-        cell3.style.border = '2.5px solid grey';
-        cell1.style.borderRadius = '5px';
-        cell2.style.borderRadius = '5px';
-        cell3.style.borderRadius = '5px';
-        cell1.style.fontSize = '35px';
-        cell2.style.fontSize = '35px';
-        cell3.style.fontSize = '35px';
-        cell1.style.color = 'solid black';
-        cell2.style.color = 'solid black';
-        cell3.style.color = 'solid black';
-    }
-
-</script>
-<!--- Referanser:
-ikoner:
-Hus-ikon:
-https://www.flaticon.com/premium-icon/home_2794870?term=house&related_id=2794870&origin=search
-Film-ikon:
-https://www.flaticon.com/free-icon/clapperboard_633600?term=movie&page=1&position=8&page=1&position=8&related_id=633600&origin=search
-Bok-ikon:
-https://www.flaticon.com/free-icon/book_864685?term=book&page=1&position=2&page=1&position=2&related_id=864685&origin=search
-Lyn-ikon:
-https://www.flaticon.com/free-icon/flash_252851?term=lightning&page=1&position=3&page=1&position=3&related_id=252851&origin=search
-Juletre-ikon:
-https://www.flaticon.com/free-icon/christmas-tree_2303340?term=christmas%20tree&page=1&position=83&page=1&position=83&related_id=2303340&origin=search
--->
-=======
-<div class="divBodyOversikt">
-<header class="headerEventOversikt">Event-oversikt</header>
-
-<table class="event-oversikt" id="eventOversikt">
-    <tr>
-        <th class="event-oversikt">Dato</th>
-        <th class="event-oversikt">Event</th>
-    </tr>
-    <tr>
-        <td class="event-oversikt">21.09.21</td>
-        <td class="event-oversikt">Bursdagsfest</td>
-    </tr>
-    <tr>
-        <td class="event-oversikt">12.11.21</td>
-        <td class="event-oversikt"><a href="show_event.html">Kino: No time to die</a></td>
-        <!-- La til link til show event siden, legge dette til på alle event tekstene? -->
-    </tr>
-    <tr>
-        <td class="event-oversikt">30.10.21</td>
-        <td class="event-oversikt">Halloween party</td>
-    </tr>
-    <tr>
-        <td class="event-oversikt">25.11.21</td>
-        <td class="event-oversikt">Høsttakkefest</td>
-    </tr>
-    <tr>
-        <td class="event-oversikt">18.12.21</td>
-        <td class="event-oversikt">Julekro</td>
-    </tr>
-    <tr>
-        <td colspan="2"><button class="knappOversikt" onclick="tableRow()">Se flere events</button></td>
-    </tr>
-</table>
-</div>
-<div class='meny'>
-            <!-- En av tre knapper som er like utenom bildefilen. CSS klassen "menu-btn" definerer rammen for knappene, men det er bildefilen som er selve linken. <a>-elementet er derfor plassert innenfor div med CSS-klasse "menu-btn", men rundt <img>-elementet med bildefilen.-->
+        <div class='meny'>
             <div class='menu-btn'>
                 <a href="event_oversikt.html">
-                    <img src="img/menu.png" alt="Event oversikt"/>
+                    <img src="img/menu.png" style="height: 50px; margin-top: 5px;"/>
                 </a>
             </div>
             <div class="menu-btn">
                 <a href="opprett_event.html" class="menu-btn">
-                    <img src="img/pluss.png" alt="Opprett event" class="menu-btn-img"/>
+                    <img src="img/pluss.png" style="height: 50px; margin-top: 5px;"/>
                 </a>
             </div>
             <div class="menu-btn">
                 <a href="venner.html" class="menu-btn">
-                    <img src="img/friends2.png" alt="Venner" class="menu-btn-img"/>
+                    <img src="img/friends2.png" style="height: 50px; margin-top: 5px;"/>
                 </a>
             </div>
+        </div>
     </div>
-<script>
-
+    <script>
+    //Funksjon for å legge inn flere events eller rader. metode hentet fra https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/insertRow sett 21.10.21
     function tableRow() {
-        var table = document.getElementById('eventOversikt')
-        var row = table.insertRow(6);
-        var cell1 = row.insertCell(-1);
-        var cell2 = row.insertCell(-1);
-        cell1.innerHTML = '01.04.21';
-        cell2.innerHTML = 'Rumpeldunk';
-        cell1.style.border = '2.5px solid white';
-        cell2.style.border = '2.5px solid white';
-        cell1.style.borderRadius = '5px';
-        cell2.style.borderRadius = '5px';
+    var table = document.getElementById('eventOversikt')
+    var row = table.insertRow(5);
+    var cell1 = row.insertCell(-1);
+    var cell2 = row.insertCell(-1);
+    var cell3 = row.insertCell(-1);
+    cell1.innerHTML = 'Icon';
+    cell2.innerHTML = 'Rumpeldunk';
+    cell3.innerHTML = 'Maks ant.:420';
     }
-
-
+    </script>
+    <!--- Referanser:
+    ikoner:
+    Hus-ikon:
+    https://www.flaticon.com/premium-icon/home_2794870?term=house&related_id=2794870&origin=search
+    Film-ikon:
+    https://www.flaticon.com/free-icon/clapperboard_633600?term=movie&page=1&position=8&page=1&position=8&related_id=633600&origin=search
+    Bok-ikon:
+    https://www.flaticon.com/free-icon/book_864685?term=book&page=1&position=2&page=1&position=2&related_id=864685&origin=search
+    Lyn-ikon:
+    https://www.flaticon.com/free-icon/flash_252851?term=lightning&page=1&position=3&page=1&position=3&related_id=252851&origin=search
+    Juletre-ikon:
+    https://www.flaticon.com/free-icon/christmas-tree_2303340?term=christmas%20tree&page=1&position=83&page=1&position=83&related_id=2303340&origin=search
+    -->
+</div>
+<div class='meny'>
+    <div class='menu-btn'>
+        <a href="event_oversikt.html">
+            <img src="img/menu.png" alt="meny" class="menu-btn-img" />
+        </a>
+    </div>
+    <div class="menu-btn">
+        <a href="opprett_event.html" class="menu-btn">
+            <img src="img/pluss.png" alt="opprett event" class="menu-btn-img"/>
+        </a>
+    </div>
+    <div class="menu-btn">
+        <a href="venner.html" class="menu-btn">
+            <img src="img/friends2.png" alt="venner" class="menu-btn-img"/>
+        </a>
+    </div>
+</div>
+<script type="text/javascript">
+var mymap = L.map('mapid').setView([58.15, 8.0], 14);
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoidGhlb2Rvcmx1aWEiLCJhIjoiY2t2N3VkcmVjMjdzeDJ2b3Y5dXlqdmNsdyJ9.XsUMsGHxV7fIKZUxUaALng', {
+maxZoom: 18,
+id: 'mapbox/streets-v11',
+tileSize: 512,
+zoomOffset: -1,
+zoomControl: false,
+accessToken: 'pk.eyJ1IjoidGhlb2Rvcmx1aWEiLCJhIjoiY2t2N3VkcmVjMjdzeDJ2b3Y5dXlqdmNsdyJ9.XsUMsGHxV7fIKZUxUaALng'
+}).addTo(mymap);
 </script>
 </body>
 </html>
