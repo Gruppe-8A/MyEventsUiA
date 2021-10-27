@@ -41,7 +41,7 @@
                 <br>
                 <br>
                 <div style=" position:absolute;bottom: 15%;margin: 0 9%">
-                    <button id="opprett-event" type="submit" name="opprett-event" class="submit-btn">Jeg vil delta på dette</button>
+                    <button id="opprett-event" type="submit" name="opprett-event" class="submit-btn" onclick="AlreadyParticipatingAlert()">Jeg vil delta på dette</button>
                 </div>
             </div>
         </div>
@@ -72,6 +72,13 @@
         zoomControl: false,
         accessToken: 'pk.eyJ1IjoidGhlb2Rvcmx1aWEiLCJhIjoiY2t2N3VkcmVjMjdzeDJ2b3Y5dXlqdmNsdyJ9.XsUMsGHxV7fIKZUxUaALng'
         }).addTo(mymap);
+
+        function AlreadyParticipatingAlert(){
+
+            alert("Du er meldt på dette arrangementet");
+
+        }
+
         </script>
     </body>
 </html>
