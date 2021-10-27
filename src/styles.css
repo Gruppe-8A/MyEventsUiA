@@ -397,6 +397,40 @@ h2 {
     text-align:center;
 }
 
+.venne-ikon{
+    max-width: 50%;
+    height: auto;
+}
+#chat-ikon{
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 40px;
+    border-right: none;
+}
+.venner{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+    overflow-x: auto;
+    padding-top: 15px;
+}
+.vennerChat{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    border-left: none;
+}
+#chatDiv{
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+
+
 
 @media screen and (min-width: 500px) {
     .main-content {
