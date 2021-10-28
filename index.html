@@ -13,6 +13,9 @@
 
         <!--Linker til javascript filen for leaflet-->
         <script src="src/leaflet/leaflet-src.js"></script>
+
+        <!-- Manifest fil for å kunne legge til ikon på hjem-skjermen til iOS og Android brukere hvis de lagrer nettsiden på telefonen sin. Innstillingene i manifest-filen gjør også at siden åpnes i fullskjermmodus på telefonen, og oppleves derfor mer som en applikasjon enn en nettside.  -->
+        <link rel="manifest" href="src/manifest.json">
     </head>
     <body>
         <!--Et HTML <img> element for å vise logoen til nettsiden. Logoen er en .png fil for å kunne ha gjennomsiktig bakgrunn. Har brukt css-klassen "logo" som finnes i styles.css filen Logoen vises øverst til venstre på mobilvisning (> 500px), og nede til høyre på skrivebordvisning (<500px) -->
@@ -49,5 +52,3 @@
     <script src="src/MyEventsUiA-leaflet.js"></script>
     </body>
     </html>
-    /*var point = [58.14299314715035, 7.995202357269564];
-    L.marker(point).addTo(mymap);
