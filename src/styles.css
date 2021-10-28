@@ -293,9 +293,10 @@ a:link {
 
 .logo {
     position: fixed;
-    left: 10px;
-    top: 10px;
+    right: 10px;
+    bottom: 70px;
     width: 70px;
+    z-index: 999;
     transition: 0.25s;
 }
 .mapstyle {

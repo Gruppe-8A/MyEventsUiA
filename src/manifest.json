@@ -1,0 +1,21 @@
+{ 
+
+  "name": "MyEventsUiA", 
+
+  "short_name": "MyEventsUiA", 
+
+  "start_url": "https://gruppe-8a.github.io/MyEventsUiA", 
+
+  "display": "standalone", 
+
+  "icons": [{ 
+
+    "src": "../img/logo_512-512.png", 
+
+    "sizes": "512x512", 
+
+    "type": "image/png" 
+
+  }] 
+
+}
