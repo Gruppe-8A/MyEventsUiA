@@ -169,6 +169,7 @@ a:link {
     bottom:  0px;
     position: fixed;
     font-size: 1em;
+    z-index: 2;
     border-radius: 50px;
     background: rgba(255, 255, 255, 0.95);
     transition: 0.25s;
@@ -210,6 +211,7 @@ a:link {
     bottom: 0px;
     height: 60px;
     width: 100%;
+    z-index: 3;
     background-color: #D1002C;
     display: grid;
     grid-template-columns: auto auto auto;
@@ -296,10 +298,10 @@ a:link {
 
 .logo {
     position: fixed;
-    right: 10px;
-    bottom: 70px;
+    top: 10px;
+    left: 10px;
     width: 70px;
-    z-index: 999;
+    z-index: 1;
     transition: 0.25s;
 }
 .mapstyle {
@@ -432,6 +434,12 @@ a:link {
         max-width: 500px;
         height: 100%;
         border-radius: 0px;
+    }
+    .logo {
+        right: 10px;
+        bottom:  70px;
+        left:  auto;
+        top: auto;
     }
 
     .profil-logo {
