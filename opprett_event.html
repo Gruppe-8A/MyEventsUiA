@@ -9,7 +9,7 @@
         <script src="src/leaflet/leaflet-src.js"></script>
     </head>
     <body>
-        <img src="img/logo.png" class="logo">
+        <img src="img/logo.png" class="logo" alt="UiA">
         <div id="mapid" style="height: calc(100% - 50px); width: calc(100%); z-index: 0; position: fixed; top: 0px; left: 0px;"></div>
         <div class="main-content">
             <a href="index.html">
@@ -83,16 +83,6 @@
                 </a>
             </div>
         </div>
-        <script type="text/javascript">
-        var mymap = L.map('mapid').setView([58.15, 8.0], 14);
-        L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoidGhlb2Rvcmx1aWEiLCJhIjoiY2t2N3VkcmVjMjdzeDJ2b3Y5dXlqdmNsdyJ9.XsUMsGHxV7fIKZUxUaALng', {
-        maxZoom: 18,
-        id: 'mapbox/streets-v11',
-        tileSize: 512,
-        zoomOffset: -1,
-        zoomControl: false,
-        accessToken: 'pk.eyJ1IjoidGhlb2Rvcmx1aWEiLCJhIjoiY2t2N3VkcmVjMjdzeDJ2b3Y5dXlqdmNsdyJ9.XsUMsGHxV7fIKZUxUaALng'
-        }).addTo(mymap);
-        </script>
+<script src="src/MyEventsUiA-leaflet.js"></script>
     </body>
 </html>
