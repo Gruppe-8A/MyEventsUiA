@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <title>Hovedside MyEventsUiA</title>
+
+        <!--Linker til CSS filen for hele nettsiden-->
+        <link rel="stylesheet" href="src/styles.css">
+
+        <!--Linker til CSS filen for leaflet for å style kartet-->
+        <link rel="stylesheet" href="src/leaflet/leaflet.css">
+
+        <!--Linker til javascript filen for leaflet-->
+        <script src="src/leaflet/leaflet-src.js"></script>
+
+        <!-- Manifest fil for å kunne legge til ikon på hjem-skjermen til iOS og Android brukere hvis de lagrer nettsiden på telefonen sin. Innstillingene i manifest-filen gjør også at siden åpnes i fullskjermmodus på telefonen, og oppleves derfor mer som en applikasjon enn en nettside.  -->
+        <link rel="manifest" href="src/manifest.json">
+    </head>
+    <body>
+        <!--Et HTML <img> element for å vise logoen til nettsiden. Logoen er en .png fil for å kunne ha gjennomsiktig bakgrunn. Har brukt css-klassen "logo" som finnes i styles.css filen Logoen vises øverst til venstre på mobilvisning (> 500px), og nede til høyre på skrivebordvisning (<500px) -->
+        <img src="img/logo.png" class="logo" alt="UiA">
+
+        <!--Et HTML <div> element (division) for visning av kartet i bakgrunnen. Elementet har id "mapid" som brukes i javascript-koden i bunn for å generere kartet i division-elementet. Elementet har en css-klasse "mapstyle" som finnes i styles.css filen. -->
+        <div id="mapid" class="mapstyle"></div>
+
+        <a href="profil.html">
+        <img src="img/profilknapp.png" class="profil-logo">
+        </a>
+        <!-- Starten på menyen. Hele meny-linjen består av et <div>-element som har CSS-klassen "meny" som finnes i styles.css filen -->            
+             <div class='meny'>
+                <!-- En av tre knapper som er like utenom bildefilen. CSS klassen "menu-btn" definerer rammen for knappene, men det er bildefilen som er selve linken. <a>-elementet er derfor plassert innenfor div med CSS-klasse "menu-btn", men rundt <img>-elementet med bildefilen.-->
+                <div class='menu-btn'>
+                    <a href="event_oversikt.html">
+                        <img src="img/menu.png" alt="meny" class="menu-btn-img" />
+                    </a>
+                </div>
+                <div class="menu-btn">
+                    <a href="opprett_event.html" class="menu-btn">
+                        <img src="img/pluss.png" alt="opprett event" class="menu-btn-img"/>
+                    </a>
+                </div>
+                <div class="menu-btn">
+                    <a href="venner.html" class="menu-btn">
+                        <img src="img/friends2.png" alt="venner" class="menu-btn-img"/>
+                    </a>
+                </div>
+            </div>  
+    </div>
+
+    <!--Start på javascriptet i denne filen -->
+    <script src="src/MyEventsUiA-leaflet.js"></script>
+    </body>
+    </html>
