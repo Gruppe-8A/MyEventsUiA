@@ -6,7 +6,7 @@
 
   "start_url": "https://gruppe-8a.github.io/MyEventsUiA", 
 
-  "display": "standalone", 
+  "display": "fullscreen", 
 
   "icons": [{ 
 
