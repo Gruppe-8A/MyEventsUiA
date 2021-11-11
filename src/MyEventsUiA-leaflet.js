@@ -24,7 +24,8 @@
         var kino= L.marker([58.1429048387354, 7.994636212547794], {icon: KinoDivIcon, title: "Kino"}).addTo(EventMap);
         
         kino.on('click', () => {
-            window.location.href="show_event.html";
+            Array.from(document.querySelectorAll('.main-content')).forEach((el) => el.classList.add('hidden'));
+            document.querySelector('#EventDiv').classList.remove("hidden");
         });
 
 
