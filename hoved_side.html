@@ -66,6 +66,7 @@
             </div>
         </div>
 
+        <!--Oversikt Event slutt-->
 
 
         <!--DIV element for Opprett Event -->
@@ -128,9 +129,58 @@
         </div>
             <!--Opprett event slutt-->
 
-        <a href="profil.html">
-        <img src="img/profilknapp.png" class="profil-logo">
-        </a>
+
+        <!--Venner og chat -->
+        <div class="main-content hidden" id="VennerDiv">
+                <div class="content-close" align="center">
+                    <div class='content-title'>VENNER & CHAT</div>
+                    <div class="close-line"></div>
+                </div>
+            
+            <div class='content'>
+                <div>
+                <table class="venner">
+                    <tr class="venner">
+                        <th class="venner"><img src="img/ikoner/profile-user.png" class="venne-ikon"><p>Roar</p></th>
+                        <th class="venner"><img src="img/ikoner/profile-user.png" class="venne-ikon"><p>Einar</p></th>
+                        <th class="venner"><img src="img/ikoner/profile-user.png" class="venne-ikon"><p>Bernt</p></th>
+                        <th class="venner"><img src="img/ikoner/profile-user.png" class="venne-ikon"><p>Steve</p></th>
+                    </tr>
+                    <tr>
+                        <th class="venner"><img src="img/ikoner/profile-user.png" class="venne-ikon"><p>Ingjerd</p></th>
+                        <th class="venner"><img src="img/ikoner/profile-user.png" class="venne-ikon"><p>Fatima</p></th>
+                        <th class="venner"><img src="img/ikoner/profile-user.png" class="venne-ikon"><p>Paul</p></th>
+                        <th class="venner"><img src="img/ikoner/profile-user.png" class="venne-ikon"><p>Jessica</p></th>
+                    </tr>
+
+                </table>
+                </div>
+                <div>
+                    <div id="chatDiv">Chat</div>
+                    <div>
+                        <table>
+                            <tr>
+                                <th><img src="img/ikoner/profile-user.png" id="chat-ikon"></th>
+                                <th class="vennerChat">Bror<p id="chat">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur.</p></th>
+                            </tr>
+                            <tr>
+                                <th><img src="img/ikoner/profile-user.png" id="chat-ikon"></th>
+                                <th class="vennerChat">Roar<p id="chat">Class aptent taciti sociosqu ad litora torquent per conubia nostra,</p></th>
+                            </tr>
+                            <tr>
+                                <th><img src="img/ikoner/profile-user.png" id="chat-ikon"></th>
+                                <th class="vennerChat">Fatima<p id="chat">Hei, blir du med på rumpeldunk idag?</p></th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Venner og chat slutt -->
+
+        <!--Profilknapp-->
+        <img src="img/profilknapp.png" class="profil-logo" id="ProfilBtn">
+
         <!-- Starten på menyen. Hele meny-linjen består av et <div>-element som har CSS-klassen "meny" som finnes i styles.css filen -->            
              <div class='meny'>
                 <!-- En av tre knapper som er like utenom bildefilen. CSS klassen "menu-btn" definerer rammen for knappene, men det er bildefilen som er selve linken.-->
@@ -143,12 +193,47 @@
                         <img src="img/pluss.png" alt="opprett event" class="menu-btn-img" id="OpprettEventBtn"/>
                 </div>
                 <div class="menu-btn">
-                    <a href="venner.html" class="menu-btn">
                         <img src="img/friends2.png" alt="venner" class="menu-btn-img" id="VennerBtn"/>
-                    </a>
                 </div>
             </div>  
     </div>
+
+
+    <!--Profil div-->
+    <div class="main-content hidden" id="ProfilDiv">
+            <div class="content-close" align="center">
+                <div class='content-title'>PROFIL OG INNSTILLINGER</div>
+                <div class="close-line"></div>
+            </div>
+                <img src="img/Jason.jpg"
+                     alt="profilbilde" class="profilbilde-jj">
+    
+        <div class="overskrift">Jason Jackson</div>
+    <div class="content">
+    <form>
+        <div>E-post</div>
+        <input type="text" id="Epost" name="Epost" placeholder="E-post" class="input-profil">
+        <br>
+        <div class="profil-input">Telefon</div>
+        <input type="number" id="Telefon" name="Telefon" placeholder="Telefon" class="input-profil">
+        <br>
+        <div class="profil-input">Snapchat</div>
+        <input type="text" id="Snapchat" name="Snapchat" placeholder="Snapchat" class="input-profil">
+        <br>
+        <div class="profil-input">Instagram</div>
+        <input type="text" id="Instagram" name="Instagram" placeholder="Instagram" class="input-profil">
+        <br>
+        <div class="profil-input">Facebook</div>
+        <input type="text" id="Facebook" name="Facebook" placeholder="Facebook" class="input-profil">
+    </form>
+    <br>
+        <br>
+        <div align="center">
+        <button type="submit" id="Lagre-profil" name="Lagre-profil" class="submit-btn">Lagre profil</button>
+            </div>
+    </div>
+    </div>
+    <!--Profil div slutt -->
 
     <!--Start på javascriptet i denne filen -->
     <script src="src/MyEventsUiA-leaflet.js"></script>
@@ -173,22 +258,51 @@
             document.querySelector('#EventOversiktDiv').classList.remove("hidden");
         });
 
-        //Javascript for å vise Event oversikt når menyknappen trykkes
-        document.querySelector('#OpprettEventBtn').addEventListener('click', function(){
-            //Hvis det er en klikk på menyknappen, så skal den fjerne klasse "hidden" fra alle andre div-elementer i main-content
-            Array.from(document.querySelectorAll('.main-content')).forEach((el) => el.classList.add('hidden'));
-            document.querySelector('#OpprettEventDiv').classList.remove("hidden");
-        });
+//Javascript for å vise Event oversikt når menyknappen trykkes
+document.querySelector('#OpprettEventBtn').addEventListener('click', function(){
+    //Hvis det er en klikk på menyknappen, så skal den fjerne klasse "hidden" fra alle andre div-elementer i main-content
+    Array.from(document.querySelectorAll('.main-content')).forEach((el) => el.classList.add('hidden'));
+    document.querySelector('#OpprettEventDiv').classList.remove("hidden");
+});
 
-        //remove css class
-        Element.prototype.removeClass = function(className){
-            this.classList.remove(className);
-        }
+//Javascript for å vise venner og chat når menyknappen trykkes
+document.querySelector('#VennerBtn').addEventListener('click', function(){
+    //Hvis det er en klikk på menyknappen, så skal den fjerne klasse "hidden" fra alle andre div-elementer i main-content
+    Array.from(document.querySelectorAll('.main-content')).forEach((el) => el.classList.add('hidden'));
+    document.querySelector('#VennerDiv').classList.remove("hidden");
+});
 
-       
+//Javascript for å vise profil når ikonet trykkes på
+document.querySelector('#ProfilBtn').addEventListener('click', function(){
+    //Hvis det er en klikk på menyknappen, så skal den fjerne klasse "hidden" fra alle andre div-elementer i main-content
+    Array.from(document.querySelectorAll('.main-content')).forEach((el) => el.classList.add('hidden'));
+    document.querySelector('#ProfilDiv').classList.remove("hidden");
+});
 
-
-
+    //Funksjon for å legge inn flere events eller rader. metode hentet fra https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableElement/insertRow sett 21.10.21
+    function tableRow() {
+    var table = document.getElementById('eventOversikt')
+    var row = table.insertRow(5);
+    var cell1 = row.insertCell(-1);
+    var cell2 = row.insertCell(-1);
+    var cell3 = row.insertCell(-1);
+    cell1.innerHTML = 'Icon';
+    cell2.innerHTML = 'Rumpeldunk';
+    cell3.innerHTML = 'Maks ant.:420';
+    }
     </script>
+    <!--- Referanser:
+    ikoner:
+    Hus-ikon:
+    https://www.flaticon.com/premium-icon/home_2794870?term=house&related_id=2794870&origin=search
+    Film-ikon:
+    https://www.flaticon.com/free-icon/clapperboard_633600?term=movie&page=1&position=8&page=1&position=8&related_id=633600&origin=search
+    Bok-ikon:
+    https://www.flaticon.com/free-icon/book_864685?term=book&page=1&position=2&page=1&position=2&related_id=864685&origin=search
+    Lyn-ikon:
+    https://www.flaticon.com/free-icon/flash_252851?term=lightning&page=1&position=3&page=1&position=3&related_id=252851&origin=search
+    Juletre-ikon:
+    https://www.flaticon.com/free-icon/christmas-tree_2303340?term=christmas%20tree&page=1&position=83&page=1&position=83&related_id=2303340&origin=search
+    -->
     </body>
     </html>
