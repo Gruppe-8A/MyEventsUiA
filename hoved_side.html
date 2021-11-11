@@ -66,25 +66,85 @@
             </div>
         </div>
 
+
+
+        <!--DIV element for Opprett Event -->
+        <div class="main-content hidden" id="OpprettEventDiv">
+
+                <div class="content-close" align="center">
+                    <div class='content-title'>OPPRETT EVENT</div>
+                    <div class="close-line"></div>
+                </div>
+            <div class='content'>
+                <form>
+                    <label for="event_title" class="header-text">Event tittel</label><br>
+                    <input type="text" id="event_title" name="event_title" class="input-style">
+                    <br>
+                    <label for="event_description" class="header-text">Event beskrivelse</label>
+                    <table class="tbl">
+                        <tr>
+                            <td><textarea id="event_description" name="event_description" class="textarea-style"></textarea>
+                            </td>
+                            <td>
+                                Last opp bilde
+                            </td>
+                        </tr>
+                    </table>
+                    <br>
+                    <label for="hvor_description" class="header-text">Hvor</label>
+                    <input type="text" id="hvor" name="hvor" class="input-style">
+                    <br>
+                    <br>
+                    <table class="tbl-bottom-frm small-text">
+                        <tr>
+                            <td colspan="2" style="text-align: center;">
+                            Ytterligere informasjon (frivillig)</td>
+                        </tr>
+                        <tr>
+                            <td>Tillat med alkohol?</td>
+                            <td style="text-align: center;">Nei <div class="switch">
+                                <input id="switch-1" type="checkbox" class="switch-input"/>
+                                <label for="switch-1" class="switch-label">Switch</label>
+                            </div> Ja</td>
+                        </tr>
+                        <tr>
+                            <td>Er arrangementet utendørs?</td>
+                            <td style="text-align: center;">Nei <div class="switch">
+                                <input id="switch-2" type="checkbox" class="switch-input"/>
+                                <label for="switch-2" class="switch-label">Switch</label>
+                            </div> Ja</td>
+                        </tr>
+                        <tr>
+                            <td>Maks antall gjester:</td>
+                            <td><input type="number" id="antall-gjester" name="antall-gjester" class="input-event-antall" placeholder="0"></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <div align="center">
+                        <button id="opprett-event" type="submit" name="opprett-event" class="submit-btn">OPPRETT</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+            <!--Opprett event slutt-->
+
         <a href="profil.html">
         <img src="img/profilknapp.png" class="profil-logo">
         </a>
         <!-- Starten på menyen. Hele meny-linjen består av et <div>-element som har CSS-klassen "meny" som finnes i styles.css filen -->            
              <div class='meny'>
-                <!-- En av tre knapper som er like utenom bildefilen. CSS klassen "menu-btn" definerer rammen for knappene, men det er bildefilen som er selve linken. <a>-elementet er derfor plassert innenfor div med CSS-klasse "menu-btn", men rundt <img>-elementet med bildefilen.-->
+                <!-- En av tre knapper som er like utenom bildefilen. CSS klassen "menu-btn" definerer rammen for knappene, men det er bildefilen som er selve linken.-->
                 <div class='menu-btn'>
                     
                         <img src="img/menu.png" alt="meny" class="menu-btn-img" id="EventOversiktBtn"/>
                     
                 </div>
                 <div class="menu-btn">
-                    <a href="opprett_event.html" class="menu-btn">
-                        <img src="img/pluss.png" alt="opprett event" class="menu-btn-img"/>
-                    </a>
+                        <img src="img/pluss.png" alt="opprett event" class="menu-btn-img" id="OpprettEventBtn"/>
                 </div>
                 <div class="menu-btn">
                     <a href="venner.html" class="menu-btn">
-                        <img src="img/friends2.png" alt="venner" class="menu-btn-img"/>
+                        <img src="img/friends2.png" alt="venner" class="menu-btn-img" id="VennerBtn"/>
                     </a>
                 </div>
             </div>  
@@ -93,15 +153,38 @@
     <!--Start på javascriptet i denne filen -->
     <script src="src/MyEventsUiA-leaflet.js"></script>
     <script>
-        //Javascript for å skjule DIV med innhold for å vise kartet bak
-        document.querySelector('.content-close').addEventListener('click', function(){
-            document.querySelector('.main-content').style.display = 'none';
+
+        //Lager en variabel som refererer til de elementene som har css klassen "content-close"
+        let CloseBtn = document.querySelectorAll(".content-close");
+
+        //Går gjennom alle de elementene som har content-close css og legger på en "onclick-event" for å skjule "parent"- (foreldre) elementet som er main-content.
+        CloseBtn.forEach(btn => {
+            btn.addEventListener("click", function() {
+                let content = this.parentElement;
+                //Legger til css-klassen "hidden" som gjør at elementet skjules.
+                content.classList.add("hidden");
+            });
         });
 
         //Javascript for å vise Event oversikt når menyknappen trykkes
         document.querySelector('#EventOversiktBtn').addEventListener('click', function(){
-            document.querySelector('#EventOversiktDiv').style.display = 'block';
+            //Hvis det er en klikk på menyknappen, så skal den fjerne klasse "hidden" fra alle andre div-elementer i main-content
+            Array.from(document.querySelectorAll('.main-content')).forEach((el) => el.classList.add('hidden'));
+            document.querySelector('#EventOversiktDiv').classList.remove("hidden");
         });
+
+        //Javascript for å vise Event oversikt når menyknappen trykkes
+        document.querySelector('#OpprettEventBtn').addEventListener('click', function(){
+            //Hvis det er en klikk på menyknappen, så skal den fjerne klasse "hidden" fra alle andre div-elementer i main-content
+            Array.from(document.querySelectorAll('.main-content')).forEach((el) => el.classList.add('hidden'));
+            document.querySelector('#OpprettEventDiv').classList.remove("hidden");
+        });
+
+        //remove css class
+        Element.prototype.removeClass = function(className){
+            this.classList.remove(className);
+        }
+
        
 
 
