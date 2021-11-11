@@ -173,6 +173,7 @@ a:link {
     border-radius: 50px;
     background: rgba(255, 255, 255, 0.95);
     transition: 0.25s;
+    animation: 0.25s ease-out 0s 1 slideInFromBottom;
 }
 .headerEventOversikt {
     color: red;
@@ -205,8 +206,27 @@ a:link {
     background-color: #737373;
     border-radius: 5px;
 }
+
 .hidden {
-    display: none;
+    bottom: -100%;
+    transition-duration: 0.3s;
+
+}
+@keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+@keyframes slideOutToBottom {
+    0% {
+    transform: translateY();
+    }
+    100% {
+    transform: translateY(100%);
+    }
 }
 .meny {
     position: fixed;
