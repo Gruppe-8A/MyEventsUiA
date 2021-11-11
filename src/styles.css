@@ -205,7 +205,9 @@ a:link {
     background-color: #737373;
     border-radius: 5px;
 }
-
+.hidden {
+    display: none;
+}
 .meny {
     position: fixed;
     bottom: 0px;
